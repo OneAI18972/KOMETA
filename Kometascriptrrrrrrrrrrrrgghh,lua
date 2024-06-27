@@ -1,0 +1,185 @@
+-- Obfuscated code
+local g1 = string.char
+local g2 = function(s) return s end
+local g3 = setmetatable
+local g4 = function(t) return #t end
+local g5 = function(f,...) return f(...) end
+local g6 = {
+    [1] = game:GetService(g1(82, 101, 112, 108, 105, 99, 97, 116, 101, 100, 83, 116, 111, 114, 97, 103, 101)),
+    [2] = game.Players.LocalPlayer:WaitForChild(g1(80, 108, 97, 121, 101, 114, 71, 117, 105))
+}
+
+local screenGui = Instance.new(g1(83, 99, 114, 101, 101, 110, 71, 117, 105))
+screenGui.Parent = g6[2]
+
+local mainFrame = Instance.new(g1(70, 114, 97, 109, 101))
+mainFrame.Size = UDim2.new(0, 300, 0, 250)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -125)
+mainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+mainFrame.Visible = false
+mainFrame.Parent = screenGui
+
+local uiCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+uiCorner.CornerRadius = UDim.new(0, 15)
+uiCorner.Parent = mainFrame
+
+local toggleButton = Instance.new(g1(84, 101, 120, 116, 66, 117, 116, 116, 111, 110))
+toggleButton.Size = UDim2.new(0, 100, 0, 30)
+toggleButton.Position = UDim2.new(0, 10, 0, 10)
+toggleButton.Text = g1(79, 112, 101, 110, 32, 71, 85, 73)
+toggleButton.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.Parent = screenGui
+
+local toggleButtonCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+toggleButtonCorner.CornerRadius = UDim.new(0, 10)
+toggleButtonCorner.Parent = toggleButton
+
+local function toggleGui()
+    mainFrame.Visible = not mainFrame.Visible
+    if mainFrame.Visible then
+        toggleButton.Text = g1(67, 108, 111, 115, 101, 32, 71, 85, 73)
+    else
+        toggleButton.Text = g1(79, 112, 101, 110, 32, 71, 85, 73)
+    end
+end
+
+toggleButton.MouseButton1Click:Connect(toggleGui)
+
+local argsLabel = Instance.new(g1(84, 101, 120, 116, 76, 97, 98, 101, 108))
+argsLabel.Size = UDim2.new(0, 200, 0, 30)
+argsLabel.Position = UDim2.new(0.5, -100, 0, 20)
+argsLabel.Text = g1(65, 114, 103, 117, 109, 101, 110, 116, 115, 32, 40, 101, 46, 103, 46, 44, 32, 49, 48, 44, 83, 117, 109, 109, 111, 110, 41, 58)
+argsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+argsLabel.BackgroundTransparency = 1
+argsLabel.Font = Enum.Font.Gotham
+argsLabel.Parent = mainFrame
+
+local argsTextBox = Instance.new(g1(84, 101, 120, 116, 66, 111, 120))
+argsTextBox.Size = UDim2.new(0, 200, 0, 30)
+argsTextBox.Position = UDim2.new(0.5, -100, 0, 50)
+argsTextBox.PlaceholderText = g1(49, 48, 44, 83, 117, 109, 109, 111, 110)
+argsTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+argsTextBox.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+argsTextBox.Font = Enum.Font.Gotham
+argsTextBox.Parent = mainFrame
+
+local argsTextBoxCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+argsTextBoxCorner.CornerRadius = UDim.new(0, 10)
+argsTextBoxCorner.Parent = argsTextBox
+
+local delayLabel = Instance.new(g1(84, 101, 120, 116, 76, 97, 98, 101, 108))
+delayLabel.Size = UDim2.new(0, 200, 0, 30)
+delayLabel.Position = UDim2.new(0.5, -100, 0, 90)
+delayLabel.Text = g1(68, 101, 108, 97, 121, 32, 40, 101, 46, 103, 46, 44, 32, 48, 46, 48, 49, 41, 58)
+delayLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+delayLabel.BackgroundTransparency = 1
+delayLabel.Font = Enum.Font.Gotham
+delayLabel.Parent = mainFrame
+
+local delayTextBox = Instance.new(g1(84, 101, 120, 116, 66, 111, 120))
+delayTextBox.Size = UDim2.new(0, 200, 0, 30)
+delayTextBox.Position = UDim2.new(0.5, -100, 0, 120)
+delayTextBox.PlaceholderText = g1(48, 46, 48, 49)
+delayTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+delayTextBox.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+delayTextBox.Font = Enum.Font.Gotham
+delayTextBox.Parent = mainFrame
+
+local delayTextBoxCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+delayTextBoxCorner.CornerRadius = UDim.new(0, 10)
+delayTextBoxCorner.Parent = delayTextBox
+
+local durationLabel = Instance.new(g1(84, 101, 120, 116, 76, 97, 98, 101, 108))
+durationLabel.Size = UDim2.new(0, 200, 0, 30)
+durationLabel.Position = UDim2.new(0.5, -100, 0, 160)
+durationLabel.Text = g1(68, 117, 114, 97, 116, 105, 111, 110, 32, 40, 101, 46, 103, 46, 44, 32, 49, 48, 41, 58)
+durationLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+durationLabel.BackgroundTransparency = 1
+durationLabel.Font = Enum.Font.Gotham
+durationLabel.Parent = mainFrame
+
+local durationTextBox = Instance.new(g1(84, 101, 120, 116, 66, 111, 120))
+durationTextBox.Size = UDim2.new(0, 200, 0, 30)
+durationTextBox.Position = UDim2.new(0.5, -100, 0, 190)
+durationTextBox.PlaceholderText = g1(49, 48)
+durationTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+durationTextBox.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+durationTextBox.Font = Enum.Font.Gotham
+durationTextBox.Parent = mainFrame
+
+local durationTextBoxCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+durationTextBoxCorner.CornerRadius = UDim.new(0, 10)
+durationTextBoxCorner.Parent = durationTextBox
+
+local startButton = Instance.new(g1(84, 101, 120, 116, 66, 117, 116, 116, 111, 110))
+startButton.Size = UDim2.new(0, 100, 0, 30)
+startButton.Position = UDim2.new(0.5, -110, 0, 230)
+startButton.Text = g1(83, 116, 97, 114, 116)
+startButton.BackgroundColor3 = Color3.fromRGB(34, 139, 34)
+startButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+startButton.Font = Enum.Font.Gotham
+startButton.Parent = mainFrame
+
+local startButtonCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+startButtonCorner.CornerRadius = UDim.new(0, 10)
+startButtonCorner.Parent = startButton
+
+local stopButton = Instance.new(g1(84, 101, 120, 116, 66, 117, 116, 116, 111, 110))
+stopButton.Size = UDim2.new(0, 100, 0, 30)
+stopButton.Position = UDim2.new(0.5, 10, 0, 230)
+stopButton.Text = g1(83, 116, 111, 112)
+stopButton.BackgroundColor3 = Color3.fromRGB(220, 20, 60)
+stopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopButton.Font = Enum.Font.Gotham
+stopButton.Parent = mainFrame
+
+local stopButtonCorner = Instance.new(g1(85, 73, 67, 111, 114, 110, 101, 114))
+stopButtonCorner.CornerRadius = UDim.new(0, 10)
+stopButtonCorner.Parent = stopButton
+
+local running = false
+local stopSignal = false
+
+local function startScript()
+    running = true
+    stopSignal = false
+    
+    local argsInput = argsTextBox.Text
+    local delayInput = tonumber(delayTextBox.Text)
+    local durationInput = tonumber(durationTextBox.Text)
+    
+    local args = {}
+    for value in string.gmatch(argsInput, "([^,]+)") do
+        table.insert(args, tonumber(value) or value)
+    end
+    
+    local startTime = tick()
+    
+    while running do
+        if tick() - startTime > durationInput then
+            break
+        end
+        
+        if stopSignal then
+            break
+        end
+        
+        g6[1][g1(83, 117, 109, 109, 111, 110, 85, 110, 105, 116, 115)]:InvokeServer(unpack(args))
+        wait(delayInput)
+    end
+    
+    print(g1(83, 99, 114, 105, 112, 116, 32, 101, 120, 101, 99, 117, 116, 105, 111, 110, 32, 99, 111, 109, 112, 108, 101, 116, 101, 100, 46))
+end
+
+startButton.MouseButton1Click:Connect(function()
+    if not running then
+        startScript()
+    end
+end)
+
+stopButton.MouseButton1Click:Connect(function()
+    stopSignal = true
+    running = false
+end)
