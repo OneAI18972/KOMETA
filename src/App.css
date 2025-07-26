@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  background-color: #0d1117;
+}
+
+.app-content {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    flex-direction: column;
+  }
+}
