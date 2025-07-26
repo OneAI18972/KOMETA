@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Вход - Sakura Art</title>
+    <meta name="description" content="Войдите в свой аккаунт для заказа артов по Roblox">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🌸</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">🌸 Sakura Art</a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/portfolio">Портфолио</a></li>
+                <li><a href="/login" class="btn">Войти</a></li>
+                <li><a href="/register" class="btn btn-secondary">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; background: var(--sakura-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        🌸 Добро пожаловать!
+                    </h1>
+                    <p style="color: var(--text-light);">Войдите в свой аккаунт для создания заказов</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Имя пользователя</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-control" 
+                            required
+                            placeholder="Введите ваше имя пользователя"
+                            autocomplete="username"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="form-control" 
+                            required
+                            placeholder="Введите ваш пароль"
+                            autocomplete="current-password"
+                        >
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" style="width: auto;">
+                            <span style="font-size: 0.9rem; color: var(--text-light);">
+                                Запомнить меня
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; margin-bottom: 1rem;">
+                        Войти
+                    </button>
+                </form>
+
+                <div style="text-align: center; padding-top: 1rem; border-top: 1px solid rgba(255, 183, 197, 0.3);">
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">
+                        Нет аккаунта? 
+                        <a href="/register" style="color: var(--sakura-dark); text-decoration: none; font-weight: 600;">
+                            Зарегистрироваться
+                        </a>
+                    </p>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">Или свяжитесь напрямую:</p>
+                        <a href="https://t.me/yourusername" class="btn telegram-btn" target="_blank">
+                            📱 Написать в Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">🎨 Примеры наших работ</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                    <div style="text-align: center; padding: 1rem; background: var(--sakura-light); border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌸</div>
+                        <h4 style="font-size: 0.9rem; color: var(--sakura-dark);">Стиль сакуры</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-light);">Нежные тона</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--sakura-light); border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✨</div>
+                        <h4 style="font-size: 0.9rem; color: var(--sakura-dark);">Детализация</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-light);">HD качество</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: var(--sakura-light); border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎭</div>
+                        <h4 style="font-size: 0.9rem; color: var(--sakura-dark);">Персонализация</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-light);">Ваш стиль</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="/portfolio" class="btn btn-secondary">
+                        Посмотреть все работы
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
