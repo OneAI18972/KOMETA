@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Профиль - Sakura Art</title>
+    <meta name="description" content="Ваш личный кабинет для отслеживания заказов артов">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🌸</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">🌸 Sakura Art</a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/portfolio">Портфолио</a></li>
+                <li><a href="/order">Заказать</a></li>
+                <li><a href="/profile">Профиль</a></li>
+                <li><button class="btn btn-secondary" onclick="logout()">Выйти</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div style="max-width: 1000px; margin: 0 auto; padding: 2rem;">
+            <div class="card">
+                <div class="profile-header">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🌸</div>
+                    <h1 id="username">Загрузка...</h1>
+                    <p>Добро пожаловать в ваш личный кабинет</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 2rem;">
+                    <div style="text-align: center; background: rgba(255, 255, 255, 0.5); padding: 1.5rem; border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                        <h4>Заказы</h4>
+                        <p id="orderCount" style="font-size: 1.5rem; font-weight: bold; color: var(--sakura-dark);">-</p>
+                    </div>
+                    
+                    <div style="text-align: center; background: rgba(255, 255, 255, 0.5); padding: 1.5rem; border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⏳</div>
+                        <h4>В работе</h4>
+                        <p id="pendingCount" style="font-size: 1.5rem; font-weight: bold; color: var(--sakura-dark);">-</p>
+                    </div>
+                    
+                    <div style="text-align: center; background: rgba(255, 255, 255, 0.5); padding: 1.5rem; border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+                        <h4>Завершено</h4>
+                        <p id="completedCount" style="font-size: 1.5rem; font-weight: bold; color: var(--sakura-dark);">-</p>
+                    </div>
+                    
+                    <div style="text-align: center; background: rgba(255, 255, 255, 0.5); padding: 1.5rem; border-radius: 15px;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
+                        <h4>Действие</h4>
+                        <a href="/order" class="btn" style="margin-top: 0.5rem; padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            Новый заказ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding: 0 1rem;">
+                    <h2 style="background: var(--sakura-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        📋 Мои заказы
+                    </h2>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-secondary status-filter active" data-status="all">
+                            Все
+                        </button>
+                        <button class="btn btn-secondary status-filter" data-status="pending">
+                            Ожидают
+                        </button>
+                        <button class="btn btn-secondary status-filter" data-status="progress">
+                            В работе
+                        </button>
+                        <button class="btn btn-secondary status-filter" data-status="completed">
+                            Завершены
+                        </button>
+                    </div>
+                </div>
+
+                <div class="orders-list">
+                    <div style="text-align: center; padding: 3rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⏳</div>
+                        <h3>Загрузка заказов...</h3>
+                        <p style="color: var(--text-light);">Пожалуйста, подождите</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">💬 Нужна помощь?</h3>
+                <p style="margin-bottom: 1.5rem; color: var(--text-light);">
+                    Свяжитесь со мной для обсуждения заказов или по любым вопросам
+                </p>
+                <a href="https://t.me/yourusername" class="btn telegram-btn" target="_blank">
+                    📱 Написать в Telegram
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    Обычно отвечаю в течение часа
+                </p>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; text-align: center;">🎨 Что можно заказать?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div style="background: var(--sakura-light); padding: 1.5rem; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">👤</div>
+                        <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">Одиночные арты</h4>
+                        <p style="font-size: 0.9rem;">Портреты, в полный рост, до плеч</p>
+                    </div>
+                    
+                    <div style="background: var(--sakura-light); padding: 1.5rem; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+                        <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">Парные арты</h4>
+                        <p style="font-size: 0.9rem;">Романтичные или дружеские сцены</p>
+                    </div>
+                    
+                    <div style="background: var(--sakura-light); padding: 1.5rem; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">👫👬👭</div>
+                        <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">Групповые арты</h4>
+                        <p style="font-size: 0.9rem;">Команды друзей и семьи</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/order" class="btn">
+                        🌸 Создать новый заказ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Profile page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProfileData();
+            setupStatusFilters();
+        });
+
+        async function loadProfileData() {
+            try {
+                // Load user info
+                const authResponse = await fetch('/api/auth-status');
+                const authData = await authResponse.json();
+                
+                if (authData.authenticated) {
+                    document.getElementById('username').textContent = authData.username;
+                }
+
+                // Load orders and update stats
+                const ordersResponse = await fetch('/api/my-orders');
+                const orders = await ordersResponse.json();
+                
+                updateOrderStats(orders);
+            } catch (error) {
+                console.error('Error loading profile data:', error);
+            }
+        }
+
+        function updateOrderStats(orders) {
+            const totalOrders = orders.length;
+            const pendingOrders = orders.filter(order => order.status === 'pending').length;
+            const progressOrders = orders.filter(order => order.status === 'progress').length;
+            const completedOrders = orders.filter(order => order.status === 'completed').length;
+
+            document.getElementById('orderCount').textContent = totalOrders;
+            document.getElementById('pendingCount').textContent = pendingOrders + progressOrders;
+            document.getElementById('completedCount').textContent = completedOrders;
+        }
+
+        function setupStatusFilters() {
+            const filterButtons = document.querySelectorAll('.status-filter');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter orders
+                    const status = this.dataset.status;
+                    const orderItems = document.querySelectorAll('.order-item');
+                    
+                    orderItems.forEach(item => {
+                        const itemStatus = item.dataset.status;
+                        if (status === 'all' || itemStatus === status) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>

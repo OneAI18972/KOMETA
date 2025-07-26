@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Заказать арт - Sakura Art</title>
+    <meta name="description" content="Закажите уникальный арт по Roblox в стиле сакуры">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🌸</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">🌸 Sakura Art</a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/portfolio">Портфолио</a></li>
+                <li><a href="/order">Заказать</a></li>
+                <li><a href="/profile">Профиль</a></li>
+                <li><button class="btn btn-secondary" onclick="logout()">Выйти</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container" style="max-width: 800px;">
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; background: var(--sakura-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        🌸 Заказать арт
+                    </h1>
+                    <p style="color: var(--text-light);">Опишите ваши пожелания и получите уникальный арт в стиле сакуры</p>
+                </div>
+
+                <form id="orderForm">
+                    <!-- Стиль арта -->
+                    <div class="form-group">
+                        <label>Стиль арта</label>
+                        <div class="order-options">
+                            <div class="option-card" onclick="selectOption('style', 'classic', this)">
+                                <h4>🌸 Классическая сакура</h4>
+                                <p>Традиционный стиль с нежными розовыми тонами</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('style', 'modern', this)">
+                                <h4>✨ Современная сакура</h4>
+                                <p>Современная интерпретация с яркими акцентами</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('style', 'minimalist', this)">
+                                <h4>🎋 Минималистичная</h4>
+                                <p>Простые линии и пастельные оттенки</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('style', 'fantasy', this)">
+                                <h4>🦄 Фэнтези сакура</h4>
+                                <p>Магические элементы и необычные цвета</p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="style" required>
+                    </div>
+
+                    <!-- Тип арта -->
+                    <div class="form-group">
+                        <label>Количество персонажей</label>
+                        <div class="order-options">
+                            <div class="option-card" onclick="selectOption('type', 'single', this)">
+                                <h4>👤 Одиночный арт</h4>
+                                <p>Один персонаж в кадре</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('type', 'pair', this)">
+                                <h4>👥 Парный арт</h4>
+                                <p>Два персонажа вместе</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('type', 'trio', this)">
+                                <h4>👫👬👭 Трио арт</h4>
+                                <p>Три персонажа в композиции</p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="type" required>
+                    </div>
+
+                    <!-- Рост персонажа -->
+                    <div class="form-group">
+                        <label>Формат изображения</label>
+                        <div class="order-options">
+                            <div class="option-card" onclick="selectOption('height', 'full', this)">
+                                <h4>👤 В полный рост</h4>
+                                <p>Персонаж целиком, с ног до головы</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('height', 'waist', this)">
+                                <h4>👔 До пояса</h4>
+                                <p>Верхняя часть тела</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('height', 'shoulders', this)">
+                                <h4>👤 До плеч</h4>
+                                <p>Голова и плечи</p>
+                            </div>
+                            <div class="option-card" onclick="selectOption('height', 'portrait', this)">
+                                <h4>🖼️ Портрет</h4>
+                                <p>Только лицо крупным планом</p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="height" required>
+                    </div>
+
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="description">Описание заказа</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            class="form-control textarea" 
+                            placeholder="Опишите детально ваши пожелания:
+• Внешность персонажа(ов)
+• Одежда и аксессуары  
+• Поза и эмоции
+• Фон и атмосфера
+• Особые пожелания
+• Цветовые предпочтения
+
+Чем подробнее описание, тем лучше результат!"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div style="background: var(--sakura-light); border-radius: 15px; padding: 1.5rem; margin-bottom: 2rem;">
+                        <h4 style="color: var(--sakura-dark); margin-bottom: 1rem;">💡 Полезные советы:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;">🎨 Укажите цвета, которые вам нравятся</li>
+                            <li style="margin-bottom: 0.5rem;">📱 Приложите референсы в Telegram</li>
+                            <li style="margin-bottom: 0.5rem;">😊 Опишите характер персонажа</li>
+                            <li style="margin-bottom: 0.5rem;">🌸 Укажите предпочтения по фону</li>
+                        </ul>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; padding: 1rem 2rem;">
+                        🌸 Создать заказ
+                    </button>
+                </form>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">⏰ Сроки выполнения</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: var(--sakura-light); padding: 1rem; border-radius: 15px;">
+                        <h4 style="color: var(--sakura-dark);">👤 Одиночный</h4>
+                        <p>1-3 дня</p>
+                    </div>
+                    <div style="background: var(--sakura-light); padding: 1rem; border-radius: 15px;">
+                        <h4 style="color: var(--sakura-dark);">👥 Парный</h4>
+                        <p>3-5 дней</p>
+                    </div>
+                    <div style="background: var(--sakura-light); padding: 1rem; border-radius: 15px;">
+                        <h4 style="color: var(--sakura-dark);">👫👬👭 Трио</h4>
+                        <p>5-7 дней</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    * Сроки могут варьироваться в зависимости от сложности заказа
+                </p>
+            </div>
+
+            <div class="card" style="margin-top: 2rem; text-align: center; background: var(--sakura-gradient); color: white;">
+                <h3 style="margin-bottom: 1rem;">🎉 Что дальше?</h3>
+                <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">1</div>
+                        <div>
+                            <h4>Подтверждение заказа</h4>
+                            <p style="opacity: 0.9; font-size: 0.9rem;">Я свяжусь с вами в Telegram в течение часа</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">2</div>
+                        <div>
+                            <h4>Обсуждение деталей</h4>
+                            <p style="opacity: 0.9; font-size: 0.9rem;">Уточним все детали и референсы</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center;">
+                        <div style="background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem; font-weight: bold;">3</div>
+                        <div>
+                            <h4>Создание арта</h4>
+                            <p style="opacity: 0.9; font-size: 0.9rem;">Я создам ваш уникальный арт с любовью</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

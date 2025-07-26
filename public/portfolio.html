@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Портфолио - Sakura Art</title>
+    <meta name="description" content="Посмотрите примеры уникальных артов по Roblox в стиле сакуры">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🌸</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">🌸 Sakura Art</a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/portfolio">Портфолио</a></li>
+                <li><a href="/login" class="btn">Войти</a></li>
+                <li><a href="/register" class="btn btn-secondary">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero" style="padding: 3rem 2rem;">
+            <h1>🌸 Портфолио</h1>
+            <p>Примеры моих работ в уникальном стиле сакуры. Каждый арт создается с душой и вниманием к деталям.</p>
+        </section>
+
+        <section style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                <button class="btn category-filter active" data-category="all">
+                    Все работы
+                </button>
+                <button class="btn btn-secondary category-filter" data-category="single">
+                    Одиночные
+                </button>
+                <button class="btn btn-secondary category-filter" data-category="pair">
+                    Парные
+                </button>
+                <button class="btn btn-secondary category-filter" data-category="group">
+                    Групповые
+                </button>
+            </div>
+
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be loaded here -->
+                <div class="card" style="grid-column: 1 / -1; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌸</div>
+                    <h3>Загрузка портфолио...</h3>
+                    <p>Пожалуйста, подождите</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" style="padding: 4rem 2rem; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); text-align: center; margin-top: 3rem;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">🎨 Понравились работы?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+                    Закажите свой уникальный арт уже сегодня!
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/register" class="btn">Создать заказ</a>
+                    <a href="https://t.me/yourusername" class="btn telegram-btn" target="_blank">
+                        📱 Обсудить в Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; background: var(--sakura-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                🌸 Процесс создания
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+                    <h4>1. Заказ</h4>
+                    <p>Вы оформляете заказ с описанием ваших пожеланий и стиля</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+                    <h4>2. Обсуждение</h4>
+                    <p>Мы обсуждаем детали и референсы в Telegram</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                    <h4>3. Создание</h4>
+                    <p>Я создаю ваш арт, учитывая все пожелания</p>
+                </div>
+                
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                    <h4>4. Результат</h4>
+                    <p>Вы получаете уникальный арт в высоком качестве</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 4rem 2rem; background: var(--sakura-light); border-radius: 20px; margin: 2rem; text-align: center;">
+            <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--sakura-dark);">💝 Что входит в заказ?</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">🖼️ Готовый арт</h4>
+                    <p style="font-size: 0.9rem;">В высоком разрешении (PNG/JPG)</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">🔄 Правки</h4>
+                    <p style="font-size: 0.9rem;">До 3 бесплатных правок</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">⚡ Быстро</h4>
+                    <p style="font-size: 0.9rem;">Готовность 1-7 дней</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: var(--shadow);">
+                    <h4 style="color: var(--sakura-dark); margin-bottom: 0.5rem;">📱 Поддержка</h4>
+                    <p style="font-size: 0.9rem;">Общение в Telegram</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Portfolio filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.add('btn-secondary');
+                        btn.classList.remove('btn');
+                    });
+                    
+                    this.classList.add('active');
+                    this.classList.remove('btn-secondary');
+                    this.classList.add('btn');
+                    
+                    // Filter portfolio items
+                    const category = this.dataset.category;
+                    const portfolioItems = document.querySelectorAll('.portfolio-item');
+                    
+                    portfolioItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
