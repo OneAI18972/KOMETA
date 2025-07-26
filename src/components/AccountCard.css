@@ -1,0 +1,203 @@
+.account-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.account-card:hover {
+  border-color: #ff6b35;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+.account-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.account-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.account-card:hover .account-image {
+  transform: scale(1.05);
+}
+
+.account-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feature-tag {
+  background-color: rgba(255, 107, 53, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.account-content {
+  padding: 16px;
+}
+
+.account-header {
+  margin-bottom: 12px;
+}
+
+.account-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.account-game {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.account-game span:first-child {
+  color: #7d8590;
+}
+
+.game-name {
+  color: #ff6b35;
+  font-weight: 500;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seller-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.seller-details {
+  flex: 1;
+}
+
+.seller-name {
+  color: #e6edf3;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.seller-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #7d8590;
+}
+
+.icon {
+  color: #7d8590;
+}
+
+.star {
+  color: #ffd700;
+}
+
+.region {
+  color: #7d8590;
+}
+
+.rating {
+  color: #e6edf3;
+  font-weight: 500;
+}
+
+.account-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-section {
+  flex: 1;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-amount {
+  color: #00d084;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price-contact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff6b35;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.account-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.action-btn.primary {
+  background-color: #ff6b35;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background-color: #e55a2b;
+}
+
+.action-btn.secondary {
+  background-color: #21262d;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+
+.action-btn.secondary:hover {
+  background-color: #30363d;
+  border-color: #ff6b35;
+}

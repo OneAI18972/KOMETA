@@ -1,0 +1,48 @@
+.main-content {
+  flex: 1;
+  background-color: #0d1117;
+  min-height: calc(100vh - 60px);
+}
+
+.content-wrapper {
+  padding: 24px;
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.activation-banner {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.activation-banner h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 8px;
+}
+
+.activation-banner p {
+  color: #7d8590;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 16px;
+  }
+  
+  .accounts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
