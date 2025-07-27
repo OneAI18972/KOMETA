@@ -13,12 +13,13 @@ const animeData = {
         rating: 9.0,
         description: 'Эпическая история о борьбе человечества за выживание в мире, где правят гигантские титаны.',
         cover: 'https://cdn.myanimelist.net/images/anime/10/47347.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/attack-on-titan/s01e01.mp4',
+        realVideoUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4',
         genres: ['Экшен', 'Драма', 'Фэнтези', 'Военное'],
         episodes_list: [
-            { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10' },
-            { number: 2, title: 'В тот день', duration: '24:10' },
-            { number: 3, title: 'Тусклый свет среди отчаяния', duration: '24:10' }
+            { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e01.mp4', realUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4' },
+            { number: 2, title: 'В тот день', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+            { number: 3, title: 'Тусклый свет среди отчаяния', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }
         ]
     },
     'naruto': {
@@ -28,12 +29,13 @@ const animeData = {
         rating: 8.4,
         description: 'Приключения молодого ниндзя, мечтающего стать Хокаге своей деревни.',
         cover: 'https://cdn.myanimelist.net/images/anime/13/17405.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/naruto/s01e01.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
         genres: ['Экшен', 'Приключения', 'Комедия', 'Школа'],
         episodes_list: [
-            { number: 1, title: 'Узумаки Наруто появляется!', duration: '23:05' },
-            { number: 2, title: 'Меня зовут Коноха-мару!', duration: '23:05' },
-            { number: 3, title: 'Соперники? Сасуке и Сакура', duration: '23:05' }
+            { number: 1, title: 'Узумаки Наруто появляется!', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+            { number: 2, title: 'Меня зовут Коноха-мару!', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+            { number: 3, title: 'Соперники? Сасуке и Сакура', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e03.mp4', realUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4' }
         ]
     },
     'demon-slayer': {
@@ -43,12 +45,13 @@ const animeData = {
         rating: 8.7,
         description: 'История о мальчике, который стал охотником на демонов, чтобы спасти свою сестру.',
         cover: 'https://cdn.myanimelist.net/images/anime/1286/99889.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/demon-slayer/s01e01.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
         genres: ['Экшен', 'Сверхъестественное', 'Историческое'],
         episodes_list: [
-            { number: 1, title: 'Жестокость', duration: '23:40' },
-            { number: 2, title: 'Учитель Саконджи Урокодаки', duration: '23:40' },
-            { number: 3, title: 'Сабито и Макомо', duration: '23:40' }
+            { number: 1, title: 'Жестокость', duration: '23:40', url: 'https://tridnyahey.server/stream/demon-slayer/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+            { number: 2, title: 'Учитель Саконджи Урокодаки', duration: '23:40', url: 'https://tridnyahey.server/stream/demon-slayer/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+            { number: 3, title: 'Сабито и Макомо', duration: '23:40', url: 'https://tridnyahey.server/stream/demon-slayer/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }
         ]
     },
     'jujutsu-kaisen': {
@@ -58,12 +61,13 @@ const animeData = {
         rating: 8.5,
         description: 'Юноша попадает в мир магии и проклятий, чтобы спасти своих друзей.',
         cover: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/jujutsu-kaisen/s01e01.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         genres: ['Экшен', 'Сверхъестественное', 'Школа'],
         episodes_list: [
-            { number: 1, title: 'Рёмен Сукуна', duration: '23:42' },
-            { number: 2, title: 'Для меня самого', duration: '23:42' },
-            { number: 3, title: 'Девочка из стали', duration: '23:42' }
+            { number: 1, title: 'Рёмен Сукуна', duration: '23:42', url: 'https://tridnyahey.server/stream/jujutsu-kaisen/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+            { number: 2, title: 'Для меня самого', duration: '23:42', url: 'https://tridnyahey.server/stream/jujutsu-kaisen/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+            { number: 3, title: 'Девочка из стали', duration: '23:42', url: 'https://tridnyahey.server/stream/jujutsu-kaisen/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' }
         ]
     },
     'one-piece': {
@@ -427,12 +431,13 @@ const animeData = {
         rating: 8.9,
         description: 'Подросток Дэндзи живёт в нищете и мечтает о простых радостях жизни.',
         cover: 'https://cdn.myanimelist.net/images/anime/1806/126216.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/chainsaw-man/s01e01.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
         genres: ['Экшен', 'Сверхъестественное', 'Комедия'],
         episodes_list: [
-            { number: 1, title: 'Собака и бензопила', duration: '23:15' },
-            { number: 2, title: 'Приход дьявола мускулов', duration: '23:15' },
-            { number: 3, title: 'Мечты и реальность', duration: '23:15' }
+            { number: 1, title: 'Собака и бензопила', duration: '23:15', url: 'https://tridnyahey.server/stream/chainsaw-man/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+            { number: 2, title: 'Приход дьявола мускулов', duration: '23:15', url: 'https://tridnyahey.server/stream/chainsaw-man/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+            { number: 3, title: 'Мечты и реальность', duration: '23:15', url: 'https://tridnyahey.server/stream/chainsaw-man/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' }
         ]
     },
     'spy-x-family': {
@@ -442,12 +447,13 @@ const animeData = {
         rating: 8.6,
         description: 'Шпион создаёт фальшивую семью для выполнения миссии.',
         cover: 'https://cdn.myanimelist.net/images/anime/1441/122795.jpg',
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        videoUrl: 'https://tridnyahey.server/stream/spy-x-family/s01e01.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
         genres: ['Экшен', 'Комедия', 'Семейное'],
         episodes_list: [
-            { number: 1, title: 'Операция Стрикс', duration: '24:10' },
-            { number: 2, title: 'Обеспечить жену', duration: '24:10' },
-            { number: 3, title: 'Подготовиться к собеседованию', duration: '24:10' }
+            { number: 1, title: 'Операция Стрикс', duration: '24:10', url: 'https://tridnyahey.server/stream/spy-x-family/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+            { number: 2, title: 'Обеспечить жену', duration: '24:10', url: 'https://tridnyahey.server/stream/spy-x-family/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+            { number: 3, title: 'Подготовиться к собеседованию', duration: '24:10', url: 'https://tridnyahey.server/stream/spy-x-family/s01e03.mp4', realUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4' }
         ]
     },
     'weathering-with-you': {
@@ -493,6 +499,9 @@ const animeData = {
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
+    // Generate fake server URLs for anime without explicit URLs
+    generateFakeServerUrls();
+    
     initializeSlider();
     initializeSearch();
     initializeNavigation();
@@ -500,7 +509,56 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add loading animation
     document.body.classList.add('loaded');
+    
+    // Show fake server info in console
+    showServerInfo();
 });
+
+// Show fake server information
+function showServerInfo() {
+    console.log('%c🎌 TRIDNYAHEY Streaming Platform', 'color: #4ecdc4; font-size: 20px; font-weight: bold;');
+    console.log('%c🖥️  Server Status: Online', 'color: #00ff00; font-weight: bold;');
+    console.log('%c📡 CDN Servers: 4 active', 'color: #4ecdc4;');
+    console.log('%c🎬 Content Library: 22 anime series', 'color: #4ecdc4;');
+    console.log('%c⚡ Streaming Quality: Up to 1080p', 'color: #4ecdc4;');
+    console.log('%c🔒 Connection: Secured by Tridnyah Protocol', 'color: #4ecdc4;');
+    console.log('%c\n📋 Available Servers:', 'color: #ff6b6b; font-weight: bold;');
+    console.log('   • tridnyahey-cdn-1.ru');
+    console.log('   • tridnyahey-cdn-2.ru');
+    console.log('   • tridnyahey-stream-1.ru');
+    console.log('   • tridnyahey-media-1.ru');
+    console.log('%c\n🎯 Player: Tridnyah v2.1.0', 'color: #45b7d1; font-weight: bold;');
+});
+
+// Generate fake server URLs for anime that don't have them
+function generateFakeServerUrls() {
+    const videoSources = [
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4'
+    ];
+    
+    Object.keys(animeData).forEach(animeId => {
+        const anime = animeData[animeId];
+        
+        // Generate main video URL if not exists
+        if (!anime.videoUrl.includes('tridnyahey.server')) {
+            anime.realVideoUrl = anime.videoUrl;
+            anime.videoUrl = `https://tridnyahey.server/stream/${animeId}/s01e01.mp4`;
+        }
+        
+        // Generate episode URLs if not exists
+        if (anime.episodes_list) {
+            anime.episodes_list.forEach((episode, index) => {
+                if (!episode.url) {
+                    episode.url = `https://tridnyahey.server/stream/${animeId}/s01e${episode.number.toString().padStart(2, '0')}.mp4`;
+                    episode.realUrl = videoSources[index % videoSources.length];
+                }
+            });
+        }
+    });
+}
 
 // Hero Slider Functions
 function initializeSlider() {
@@ -655,8 +713,18 @@ function openPlayer(animeId) {
     // Set player title
     playerTitle.textContent = anime.title;
     
-    // Set video source
-    video.src = anime.videoUrl;
+    // Show fake loading from our server
+    showVideoLoading(video);
+    
+    // Set real video source after short delay to simulate server response
+    setTimeout(() => {
+        const realUrl = anime.realVideoUrl || anime.videoUrl;
+        video.src = realUrl;
+        hideVideoLoading();
+        
+        // Show success notification with fake server info
+        showServerNotification(anime.title, 1);
+    }, 1500);
     
     // Generate episodes
     generateEpisodes(animeId, episodesGrid);
@@ -719,6 +787,7 @@ function generateEpisodes(animeId, container) {
             <button class="episode-play-btn" onclick="selectEpisode(${episode.number}, this.parentElement)">
                 <i class="fas fa-play"></i>
             </button>
+            <div class="episode-url" style="display: none;">${episode.url || `https://tridnyahey.server/stream/${animeId}/s01e${episode.number.toString().padStart(2, '0')}.mp4`}</div>
         `;
         
         if (index === 0) {
@@ -751,12 +820,42 @@ function selectEpisode(episodeNumber, episodeElement) {
     // Add active class to selected episode
     episodeElement.classList.add('active');
     
-    // Change video source (for demo, we'll just restart the same video)
     const video = document.getElementById('tridnyah-player');
-    video.currentTime = 0;
-    video.play();
+    const playerTitle = document.getElementById('player-title');
     
-    showNotification(`Эпизод ${episodeNumber} загружен`, 'success');
+    // Find current anime and episode
+    let currentAnime = null;
+    let currentEpisode = null;
+    
+    for (const [animeId, anime] of Object.entries(animeData)) {
+        if (anime.title === playerTitle.textContent) {
+            currentAnime = anime;
+            currentEpisode = anime.episodes_list.find(ep => ep.number === episodeNumber);
+            break;
+        }
+    }
+    
+    if (currentEpisode) {
+        // Show loading
+        showVideoLoading(video);
+        
+        // Simulate server loading
+        setTimeout(() => {
+            const realUrl = currentEpisode.realUrl || currentEpisode.url;
+            video.src = realUrl;
+            video.currentTime = 0;
+            video.play();
+            hideVideoLoading();
+            
+            // Show server notification
+            showServerNotification(currentAnime.title, episodeNumber);
+        }, 800);
+    } else {
+        // Fallback
+        video.currentTime = 0;
+        video.play();
+        showNotification(`Эпизод ${episodeNumber} загружен`, 'success');
+    }
 }
 
 // Video Player Controls
@@ -810,6 +909,68 @@ function toggleFullscreen() {
     } else if (video.msRequestFullscreen) {
         video.msRequestFullscreen();
     }
+}
+
+// Server Simulation Functions
+function showVideoLoading(videoElement) {
+    const playerWrapper = videoElement.parentElement;
+    
+    // Create loading overlay
+    const loadingOverlay = document.createElement('div');
+    loadingOverlay.className = 'video-loading-overlay';
+    loadingOverlay.innerHTML = `
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">
+                <p>Подключение к серверу Tridnyah...</p>
+                <p class="server-info">Server: tridnyahey-cdn-${Math.floor(Math.random() * 9) + 1}.ru</p>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    playerWrapper.appendChild(loadingOverlay);
+    
+    // Animate loading bar
+    const progressBar = loadingOverlay.querySelector('.loading-progress');
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 30;
+        if (progress > 100) progress = 100;
+        progressBar.style.width = progress + '%';
+        if (progress >= 100) clearInterval(interval);
+    }, 200);
+}
+
+function hideVideoLoading() {
+    const loadingOverlay = document.querySelector('.video-loading-overlay');
+    if (loadingOverlay) {
+        loadingOverlay.style.opacity = '0';
+        setTimeout(() => {
+            if (loadingOverlay.parentNode) {
+                loadingOverlay.parentNode.removeChild(loadingOverlay);
+            }
+        }, 300);
+    }
+}
+
+function showServerNotification(animeTitle, episodeNumber) {
+    const servers = [
+        'tridnyahey-cdn-1.ru',
+        'tridnyahey-cdn-2.ru', 
+        'tridnyahey-stream-1.ru',
+        'tridnyahey-media-1.ru'
+    ];
+    
+    const server = servers[Math.floor(Math.random() * servers.length)];
+    const quality = ['1080p', '720p', '480p'][Math.floor(Math.random() * 3)];
+    
+    showNotification(
+        `✅ Загружено с ${server} | ${quality} | Эпизод ${episodeNumber}`, 
+        'success'
+    );
 }
 
 // Utility Functions
