@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIDNYAHEY - Смотри аниме онлайн</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>TRIDNYAHEY</h1>
+                <span class="brand-subtitle">powered by Tridnyah</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Главная</a>
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#genres" class="nav-link">Жанры</a>
+                <a href="#search" class="nav-link">Поиск</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Поиск аниме..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" data-bg="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop">
+                <div class="hero-content">
+                    <h2 class="hero-title">Атака титанов</h2>
+                    <p class="hero-description">Эпическая история о борьбе человечества за выживание в мире, где правят гигантские титаны.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="openPlayer('attack-on-titan')">
+                            <i class="fas fa-play"></i> Смотреть
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> В избранное
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=1920&h=1080&fit=crop">
+                <div class="hero-content">
+                    <h2 class="hero-title">Наруто</h2>
+                    <p class="hero-description">Приключения молодого ниндзя, мечтающего стать Хокаге своей деревни.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="openPlayer('naruto')">
+                            <i class="fas fa-play"></i> Смотреть
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> В избранное
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop">
+                <div class="hero-content">
+                    <h2 class="hero-title">Демон Слайер</h2>
+                    <p class="hero-description">История о мальчике, который стал охотником на демонов, чтобы спасти свою сестру.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="openPlayer('demon-slayer')">
+                            <i class="fas fa-play"></i> Смотреть
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> В избранное
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <button class="hero-nav-btn prev" onclick="prevSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn next" onclick="nextSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Popular Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Популярное сейчас</h2>
+            <div class="anime-grid">
+                <div class="anime-card" onclick="openPlayer('jujutsu-kaisen')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=300&h=400&fit=crop" alt="Магическая битва">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">9.2</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Магическая битва</h3>
+                        <p class="anime-year">2020 • 24 эп.</p>
+                    </div>
+                </div>
+                
+                <div class="anime-card" onclick="openPlayer('one-piece')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop" alt="Ван Пис">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">9.5</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Ван Пис</h3>
+                        <p class="anime-year">1999 • 1000+ эп.</p>
+                    </div>
+                </div>
+
+                <div class="anime-card" onclick="openPlayer('spirited-away')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=300&h=400&fit=crop" alt="Унесённые призраками">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">9.8</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Унесённые призраками</h3>
+                        <p class="anime-year">2001 • Фильм</p>
+                    </div>
+                </div>
+
+                <div class="anime-card" onclick="openPlayer('your-name')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop" alt="Твоё имя">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">9.1</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Твоё имя</h3>
+                        <p class="anime-year">2016 • Фильм</p>
+                    </div>
+                </div>
+
+                <div class="anime-card" onclick="openPlayer('death-note')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=300&h=400&fit=crop" alt="Тетрадь смерти">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">9.0</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Тетрадь смерти</h3>
+                        <p class="anime-year">2006 • 37 эп.</p>
+                    </div>
+                </div>
+
+                <div class="anime-card" onclick="openPlayer('one-punch-man')">
+                    <div class="anime-poster">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop" alt="Ванпанчмен">
+                        <div class="anime-overlay">
+                            <i class="fas fa-play play-icon"></i>
+                        </div>
+                        <div class="anime-rating">8.9</div>
+                    </div>
+                    <div class="anime-info">
+                        <h3 class="anime-title">Ванпанчмен</h3>
+                        <p class="anime-year">2015 • 24 эп.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section class="section genres-section">
+        <div class="container">
+            <h2 class="section-title">Жанры</h2>
+            <div class="genres-grid">
+                <div class="genre-card">
+                    <i class="fas fa-fist-raised genre-icon"></i>
+                    <h3>Экшен</h3>
+                </div>
+                <div class="genre-card">
+                    <i class="fas fa-heart genre-icon"></i>
+                    <h3>Романтика</h3>
+                </div>
+                <div class="genre-card">
+                    <i class="fas fa-laugh genre-icon"></i>
+                    <h3>Комедия</h3>
+                </div>
+                <div class="genre-card">
+                    <i class="fas fa-magic genre-icon"></i>
+                    <h3>Фэнтези</h3>
+                </div>
+                <div class="genre-card">
+                    <i class="fas fa-ghost genre-icon"></i>
+                    <h3>Ужасы</h3>
+                </div>
+                <div class="genre-card">
+                    <i class="fas fa-graduation-cap genre-icon"></i>
+                    <h3>Школа</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>TRIDNYAHEY</h3>
+                    <p>Лучшее место для просмотра аниме онлайн</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Навигация</h4>
+                        <a href="#home">Главная</a>
+                        <a href="#catalog">Каталог</a>
+                        <a href="#genres">Жанры</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Информация</h4>
+                        <a href="#about">О нас</a>
+                        <a href="#contact">Контакты</a>
+                        <a href="#privacy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TRIDNYAHEY. Powered by Tridnyah Player.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Player Modal -->
+    <div id="player-modal" class="player-modal">
+        <div class="player-container">
+            <div class="player-header">
+                <h3 id="player-title">Название аниме</h3>
+                <button class="close-player" onclick="closePlayer()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="player-wrapper">
+                <video id="tridnyah-player" class="video-player" controls>
+                    <source src="" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <div class="player-controls">
+                    <div class="control-group">
+                        <button class="control-btn" onclick="togglePlay()">
+                            <i class="fas fa-play" id="play-pause-icon"></i>
+                        </button>
+                        <button class="control-btn" onclick="toggleMute()">
+                            <i class="fas fa-volume-up" id="volume-icon"></i>
+                        </button>
+                        <input type="range" class="volume-slider" min="0" max="100" value="100" onchange="changeVolume(this.value)">
+                    </div>
+                    <div class="control-group">
+                        <button class="control-btn" onclick="toggleFullscreen()">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="player-info">
+                <div class="episode-selector">
+                    <h4>Эпизоды:</h4>
+                    <div class="episodes-grid" id="episodes-grid">
+                        <!-- Episodes will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
