@@ -1,7 +1,7 @@
 // Global variables
 let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const indicators = document.querySelectorAll('.indicator');
+let slides = [];
+let indicators = [];
 let slideInterval;
 
 // Anime data with real covers and video sources
@@ -499,19 +499,44 @@ const animeData = {
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
-    // Generate fake server URLs for anime without explicit URLs
-    generateFakeServerUrls();
+    console.log('🚀 Initializing TRIDNYAHEY...');
     
-    initializeSlider();
-    initializeSearch();
-    initializeNavigation();
-    setBackgroundImages();
-    
-    // Add loading animation
-    document.body.classList.add('loaded');
-    
-    // Show fake server info in console
-    showServerInfo();
+    try {
+        // Generate fake server URLs for anime without explicit URLs
+        generateFakeServerUrls();
+        console.log('✅ Server URLs generated');
+        
+        initializeSlider();
+        console.log('✅ Slider initialized');
+        
+        initializeSearch();
+        console.log('✅ Search initialized');
+        
+        initializeNavigation();
+        console.log('✅ Navigation initialized');
+        
+        setBackgroundImages();
+        console.log('✅ Background images set');
+        
+        // Initialize genre card interactions
+        initializeGenreCards();
+        console.log('✅ Genre cards initialized');
+        
+        // Initialize lazy loading
+        lazyLoadImages();
+        console.log('✅ Lazy loading initialized');
+        
+        // Add loading animation
+        document.body.classList.add('loaded');
+        console.log('✅ Loading animation added');
+        
+        // Show fake server info in console
+        showServerInfo();
+        
+        console.log('🎉 TRIDNYAHEY fully loaded!');
+    } catch (error) {
+        console.error('❌ Error initializing TRIDNYAHEY:', error);
+    }
 });
 
 // Show fake server information
@@ -528,7 +553,7 @@ function showServerInfo() {
     console.log('   • tridnyahey-stream-1.ru');
     console.log('   • tridnyahey-media-1.ru');
     console.log('%c\n🎯 Player: Tridnyah v2.1.0', 'color: #45b7d1; font-weight: bold;');
-});
+}
 
 // Generate fake server URLs for anime that don't have them
 function generateFakeServerUrls() {
@@ -562,7 +587,15 @@ function generateFakeServerUrls() {
 
 // Hero Slider Functions
 function initializeSlider() {
-    if (slides.length === 0) return;
+    slides = document.querySelectorAll('.hero-slide');
+    indicators = document.querySelectorAll('.indicator');
+    
+    console.log(`Found ${slides.length} slides and ${indicators.length} indicators`);
+    
+    if (slides.length === 0) {
+        console.warn('No slides found! Slider will not work.');
+        return;
+    }
     
     // Set initial slide
     showSlide(0);
@@ -698,15 +731,22 @@ function performSearch(query) {
 
 // Tridnyah Player Functions
 function openPlayer(animeId) {
+    console.log(`Opening player for: ${animeId}`);
+    
     const modal = document.getElementById('player-modal');
     const playerTitle = document.getElementById('player-title');
     const video = document.getElementById('tridnyah-player');
     const episodesGrid = document.getElementById('episodes-grid');
     
+    console.log('Modal:', modal, 'Title:', playerTitle, 'Video:', video, 'Episodes:', episodesGrid);
+    
     if (!animeData[animeId]) {
+        console.error(`Anime data not found for: ${animeId}`);
         showNotification('Аниме не найдено', 'error');
         return;
     }
+    
+    console.log('Anime data found:', animeData[animeId]);
     
     const anime = animeData[animeId];
     
@@ -1050,7 +1090,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Genre card interactions
-document.addEventListener('DOMContentLoaded', function() {
+function initializeGenreCards() {
     const genreCards = document.querySelectorAll('.genre-card');
     
     genreCards.forEach(card => {
@@ -1065,7 +1105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}
 
 // Smooth scrolling for all internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1098,8 +1138,7 @@ function lazyLoadImages() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading
-document.addEventListener('DOMContentLoaded', lazyLoadImages);
+// Lazy loading is now initialized in main DOMContentLoaded handler
 
 // Add parallax effect to hero section
 window.addEventListener('scroll', function() {
@@ -1426,6 +1465,7 @@ function showPopular() {
 // Update navigation function to handle new sections
 function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
+    console.log(`Found ${navLinks.length} navigation links`);
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
