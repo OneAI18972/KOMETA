@@ -14,6 +14,7 @@ const animeData = {
         description: 'Эпическая история о борьбе человечества за выживание в мире, где правят гигантские титаны.',
         cover: 'https://cdn.myanimelist.net/images/anime/10/47347.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Драма', 'Фэнтези', 'Военное'],
         episodes_list: [
             { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10' },
             { number: 2, title: 'В тот день', duration: '24:10' },
@@ -28,6 +29,7 @@ const animeData = {
         description: 'Приключения молодого ниндзя, мечтающего стать Хокаге своей деревни.',
         cover: 'https://cdn.myanimelist.net/images/anime/13/17405.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Приключения', 'Комедия', 'Школа'],
         episodes_list: [
             { number: 1, title: 'Узумаки Наруто появляется!', duration: '23:05' },
             { number: 2, title: 'Меня зовут Коноха-мару!', duration: '23:05' },
@@ -42,6 +44,7 @@ const animeData = {
         description: 'История о мальчике, который стал охотником на демонов, чтобы спасти свою сестру.',
         cover: 'https://cdn.myanimelist.net/images/anime/1286/99889.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Сверхъестественное', 'Историческое'],
         episodes_list: [
             { number: 1, title: 'Жестокость', duration: '23:40' },
             { number: 2, title: 'Учитель Саконджи Урокодаки', duration: '23:40' },
@@ -56,6 +59,7 @@ const animeData = {
         description: 'Юноша попадает в мир магии и проклятий, чтобы спасти своих друзей.',
         cover: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Сверхъестественное', 'Школа'],
         episodes_list: [
             { number: 1, title: 'Рёмен Сукуна', duration: '23:42' },
             { number: 2, title: 'Для меня самого', duration: '23:42' },
@@ -70,6 +74,7 @@ const animeData = {
         description: 'Приключения пирата Монки Д. Луффи в поисках легендарного сокровища.',
         cover: 'https://cdn.myanimelist.net/images/anime/6/73245.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Приключения', 'Комедия', 'Драма'],
         episodes_list: [
             { number: 1, title: 'Я - Луффи! Мужчина, который станет Королём Пиратов!', duration: '24:08' },
             { number: 2, title: 'Появление великого мечника! Пиратский охотник Ророноа Зоро', duration: '24:08' },
@@ -84,6 +89,7 @@ const animeData = {
         description: 'Девочка попадает в мир духов и должна найти способ вернуться домой.',
         cover: 'https://cdn.myanimelist.net/images/anime/6/79597.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Приключения', 'Семейное', 'Фэнтези'],
         episodes_list: [
             { number: 1, title: 'Полнометражный фильм', duration: '125:00' }
         ]
@@ -96,6 +102,7 @@ const animeData = {
         description: 'Романтическая история о двух подростках, которые меняются телами.',
         cover: 'https://cdn.myanimelist.net/images/anime/5/87048.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Драма', 'Романтика', 'Сверхъестественное'],
         episodes_list: [
             { number: 1, title: 'Полнометражный фильм', duration: '106:00' }
         ]
@@ -108,6 +115,7 @@ const animeData = {
         description: 'Студент находит тетрадь, способную убивать людей, и решает изменить мир.',
         cover: 'https://cdn.myanimelist.net/images/anime/9/9453.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Драма', 'Психологическое', 'Сверхъестественное', 'Триллер'],
         episodes_list: [
             { number: 1, title: 'Возрождение', duration: '23:10' },
             { number: 2, title: 'Столкновение', duration: '23:10' },
@@ -122,6 +130,7 @@ const animeData = {
         description: 'Герой, который может победить любого врага одним ударом.',
         cover: 'https://cdn.myanimelist.net/images/anime/12/76049.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Комедия', 'Сверхъестественное'],
         episodes_list: [
             { number: 1, title: 'Самый сильный мужчина', duration: '24:15' },
             { number: 2, title: 'Одинокий киборг', duration: '24:15' },
@@ -136,6 +145,7 @@ const animeData = {
         description: 'В мире, где у большинства людей есть суперспособности, мальчик без них мечтает стать героем.',
         cover: 'https://cdn.myanimelist.net/images/anime/10/78745.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Комедия', 'Школа', 'Сверхъестественное'],
         episodes_list: [
             { number: 1, title: 'Изуку Мидория: Начало', duration: '23:40' },
             { number: 2, title: 'Что нужно, чтобы стать героем', duration: '23:40' },
@@ -150,6 +160,7 @@ const animeData = {
         description: 'Студент становится полугулем и должен научиться жить в двух мирах.',
         cover: 'https://cdn.myanimelist.net/images/anime/5/64449.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Драма', 'Ужасы', 'Сверхъестественное'],
         episodes_list: [
             { number: 1, title: 'Трагедия', duration: '23:50' },
             { number: 2, title: 'Инкубационный период', duration: '23:50' },
@@ -164,10 +175,318 @@ const animeData = {
         description: 'Братья-алхимики ищут философский камень, чтобы вернуть свои тела.',
         cover: 'https://cdn.myanimelist.net/images/anime/1223/96541.jpg',
         videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Приключения', 'Драма', 'Фэнтези'],
         episodes_list: [
             { number: 1, title: 'Стальной алхимик', duration: '24:50' },
             { number: 2, title: 'Первый день', duration: '24:50' },
             { number: 3, title: 'Город еретиков', duration: '24:50' }
+        ]
+    },
+    'mob-psycho': {
+        title: 'Моб Психо 100',
+        episodes: 37,
+        year: '2016-2022',
+        rating: 8.8,
+        description: 'Школьник с психическими способностями пытается жить обычной жизнью.',
+        cover: 'https://cdn.myanimelist.net/images/anime/8/80356.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Комедия', 'Сверхъестественное', 'Школа'],
+        episodes_list: [
+            { number: 1, title: 'Самопровозглашённый экстрасенс', duration: '24:10' },
+            { number: 2, title: 'Беспокойство по поводу будущего', duration: '24:10' },
+            { number: 3, title: 'Приглашение к совершенствованию', duration: '24:10' }
+        ]
+    },
+    'hunter-x-hunter': {
+        title: 'Хантер х Хантер',
+        episodes: 148,
+        year: '2011-2014',
+        rating: 9.0,
+        description: 'Мальчик отправляется в путешествие, чтобы найти своего отца-охотника.',
+        cover: 'https://cdn.myanimelist.net/images/anime/11/33657.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Приключения', 'Фэнтези'],
+        episodes_list: [
+            { number: 1, title: 'Отъезд х и х Друзья', duration: '23:40' },
+            { number: 2, title: 'Испытание х Достоинства х Неожиданное путешествие', duration: '23:40' },
+            { number: 3, title: 'Соперники х за х выживание', duration: '23:40' }
+        ]
+    },
+    'code-geass': {
+        title: 'Код Гиас: Восставший Лелуш',
+        episodes: 50,
+        year: '2006-2008',
+        rating: 8.7,
+        description: 'Принц получает силу Гиас и начинает революцию против империи.',
+        cover: 'https://cdn.myanimelist.net/images/anime/5/50331.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Драма', 'Меха', 'Военное'],
+        episodes_list: [
+            { number: 1, title: 'День рождения демона', duration: '25:00' },
+            { number: 2, title: 'Пробуждение Белого рыцаря', duration: '25:00' },
+            { number: 3, title: 'Ложная классность', duration: '25:00' }
+        ]
+    },
+    'violet-evergarden': {
+        title: 'Вайолет Эвергарден',
+        episodes: 13,
+        year: '2018',
+        rating: 8.5,
+        description: 'Бывший солдат учится понимать эмоции, работая писателем писем.',
+        cover: 'https://cdn.myanimelist.net/images/anime/3/88097.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Драма', 'Фэнтези', 'Романтика'],
+        episodes_list: [
+            { number: 1, title: 'Я люблю тебя и Автоматические куклы', duration: '24:00' },
+            { number: 2, title: 'Никогда не вернуться', duration: '24:00' },
+            { number: 3, title: 'Может быть, ты тот особенный "Другой"', duration: '24:00' }
+        ]
+    },
+    'cowboy-bebop': {
+        title: 'Ковбой Бибоп',
+        episodes: 26,
+        year: '1998-1999',
+        rating: 8.8,
+        description: 'Команда охотников за головами путешествует по солнечной системе.',
+        cover: 'https://cdn.myanimelist.net/images/anime/4/19644.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Приключения', 'Космос', 'Драма'],
+        episodes_list: [
+            { number: 1, title: 'Астероидный блюз', duration: '24:40' },
+            { number: 2, title: 'Бродячий пёс', duration: '24:40' },
+            { number: 3, title: 'Честный Эд', duration: '24:40' }
+        ]
+    },
+    'steins-gate': {
+        title: 'Врата Штейна',
+        episodes: 24,
+        year: '2011',
+        rating: 9.0,
+        description: 'Учёный-любитель случайно изобретает машину времени.',
+        cover: 'https://cdn.myanimelist.net/images/anime/5/73199.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Драма', 'Научная фантастика', 'Триллер'],
+        episodes_list: [
+            { number: 1, title: 'Начало и конец теории пролога', duration: '24:10' },
+            { number: 2, title: 'Время-паранойя', duration: '24:10' },
+            { number: 3, title: 'Параллельный процесс-паранойя', duration: '24:10' }
+        ]
+    },
+    'akame-ga-kill': {
+        title: 'Убийца Акаме',
+        episodes: 24,
+        year: '2014',
+        rating: 7.5,
+        description: 'Деревенский парень присоединяется к группе убийц, чтобы свергнуть империю.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1429/95946.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Приключения', 'Драма', 'Фэнтези'],
+        episodes_list: [
+            { number: 1, title: 'Убить тьму', duration: '23:40' },
+            { number: 2, title: 'Убить власть', duration: '23:40' },
+            { number: 3, title: 'Убить своих друзей', duration: '23:40' }
+        ]
+    },
+    'mob-psycho-100': {
+        title: 'Моб Психо 100 III',
+        episodes: 12,
+        year: '2022',
+        rating: 9.2,
+        description: 'Заключительный сезон истории о школьнике с психическими способностями.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1228/125011.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Комедия', 'Сверхъестественное'],
+        episodes_list: [
+            { number: 1, title: 'Будущее', duration: '23:20' },
+            { number: 2, title: 'Большая чистка', duration: '23:20' },
+            { number: 3, title: 'Карьера', duration: '23:20' }
+        ]
+    },
+    'kimetsu-no-yaiba-movie': {
+        title: 'Клинок, рассекающий демонов: Поезд Бесконечности',
+        episodes: 1,
+        year: '2020',
+        rating: 8.2,
+        description: 'Танджиро и его друзья сражаются с демонами в поезде.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1704/106947.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Сверхъестественное', 'Историческое'],
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '117:00' }
+        ]
+    },
+    'kaguya-sama': {
+        title: 'Госпожа Кагуя: В любви как на войне',
+        episodes: 37,
+        year: '2019-2022',
+        rating: 8.4,
+        description: 'Два гения пытаются заставить друг друга признаться в любви первыми.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1160/95099.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Комедия', 'Романтика', 'Школа'],
+        episodes_list: [
+            { number: 1, title: 'Я заставлю тебя признаться', duration: '23:40' },
+            { number: 2, title: 'Кино и зонт', duration: '23:40' },
+            { number: 3, title: 'Кагуя хочет быть признанной', duration: '23:40' }
+        ]
+    },
+    'haikyuu': {
+        title: 'Волейбол!!',
+        episodes: 85,
+        year: '2014-2020',
+        rating: 8.7,
+        description: 'История о школьной волейбольной команде и их пути к чемпионству.',
+        cover: 'https://cdn.myanimelist.net/images/anime/7/76014.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Комедия', 'Драма', 'Школа', 'Спорт'],
+        episodes_list: [
+            { number: 1, title: 'Конец и начало', duration: '24:10' },
+            { number: 2, title: 'Взгляд на волейбол', duration: '24:10' },
+            { number: 3, title: 'Самый сильный соперник', duration: '24:10' }
+        ]
+    },
+    'overlord': {
+        title: 'Повелитель',
+        episodes: 52,
+        year: '2015-2022',
+        rating: 7.9,
+        description: 'Игрок застревает в MMORPG в роли могущественного скелета-мага.',
+        cover: 'https://cdn.myanimelist.net/images/anime/7/88019.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Приключения', 'Фэнтези', 'Сверхъестественное'],
+        episodes_list: [
+            { number: 1, title: 'Конец и начало', duration: '23:40' },
+            { number: 2, title: 'Этаж гробниц', duration: '23:40' },
+            { number: 3, title: 'Битва за Карне', duration: '23:40' }
+        ]
+    },
+    're-zero': {
+        title: 'Re:Zero - Жизнь с нуля в альтернативном мире',
+        episodes: 50,
+        year: '2016-2021',
+        rating: 8.2,
+        description: 'Парень попадает в фэнтезийный мир и получает способность возвращаться после смерти.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1522/128039.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Драма', 'Фэнтези', 'Психологическое', 'Триллер'],
+        episodes_list: [
+            { number: 1, title: 'Начало конца мира', duration: '49:35' },
+            { number: 2, title: 'Воссоединение с Вещим', duration: '25:10' },
+            { number: 3, title: 'Начать жизнь с нуля в другом мире', duration: '25:10' }
+        ]
+    },
+    'made-in-abyss': {
+        title: 'Созданный в Бездне',
+        episodes: 25,
+        year: '2017-2022',
+        rating: 8.7,
+        description: 'Девочка спускается в таинственную бездну в поисках своей матери.',
+        cover: 'https://cdn.myanimelist.net/images/anime/6/86733.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Приключения', 'Драма', 'Фэнтези', 'Научная фантастика'],
+        episodes_list: [
+            { number: 1, title: 'Город на краю Бездны', duration: '25:40' },
+            { number: 2, title: 'Воскрешение', duration: '25:40' },
+            { number: 3, title: 'Отъезд', duration: '25:40' }
+        ]
+    },
+    'vinland-saga': {
+        title: 'Сага о Винланде',
+        episodes: 48,
+        year: '2019-2023',
+        rating: 8.8,
+        description: 'Эпическая история о викингах и поиске мирной земли Винланд.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1500/103005.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Приключения', 'Драма', 'Историческое'],
+        episodes_list: [
+            { number: 1, title: 'Где-то не здесь', duration: '24:20' },
+            { number: 2, title: 'Меч', duration: '24:20' },
+            { number: 3, title: 'Тролль', duration: '24:20' }
+        ]
+    },
+    'jojo-bizarre-adventure': {
+        title: 'Невероятные приключения ДжоДжо',
+        episodes: 190,
+        year: '2012-2023',
+        rating: 8.5,
+        description: 'Многопоколенческая сага о семье Джостар и их сверхъестественных приключениях.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Экшен', 'Приключения', 'Сверхъестественное', 'Комедия'],
+        episodes_list: [
+            { number: 1, title: 'Дио Брандо', duration: '23:30' },
+            { number: 2, title: 'Письмо от прошлого', duration: '23:30' },
+            { number: 3, title: 'Молодость с Дио', duration: '23:30' }
+        ]
+    },
+    'chainsaw-man': {
+        title: 'Человек-бензопила',
+        episodes: 12,
+        year: '2022',
+        rating: 8.9,
+        description: 'Подросток Дэндзи живёт в нищете и мечтает о простых радостях жизни.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1806/126216.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Сверхъестественное', 'Комедия'],
+        episodes_list: [
+            { number: 1, title: 'Собака и бензопила', duration: '23:15' },
+            { number: 2, title: 'Приход дьявола мускулов', duration: '23:15' },
+            { number: 3, title: 'Мечты и реальность', duration: '23:15' }
+        ]
+    },
+    'spy-x-family': {
+        title: 'Семья шпиона',
+        episodes: 25,
+        year: '2022-2023',
+        rating: 8.6,
+        description: 'Шпион создаёт фальшивую семью для выполнения миссии.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1441/122795.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Экшен', 'Комедия', 'Семейное'],
+        episodes_list: [
+            { number: 1, title: 'Операция Стрикс', duration: '24:10' },
+            { number: 2, title: 'Обеспечить жену', duration: '24:10' },
+            { number: 3, title: 'Подготовиться к собеседованию', duration: '24:10' }
+        ]
+    },
+    'weathering-with-you': {
+        title: 'Дитя погоды',
+        episodes: 1,
+        year: '2019',
+        rating: 8.2,
+        description: 'Парень встречает девушку, которая может управлять погодой.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1880/101146.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        genres: ['Драма', 'Романтика', 'Сверхъестественное'],
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '112:00' }
+        ]
+    },
+    'princess-mononoke': {
+        title: 'Принцесса Мононоке',
+        episodes: 1,
+        year: '1997',
+        rating: 8.4,
+        description: 'Принц пытается найти лекарство от проклятия и попадает в войну между людьми и духами леса.',
+        cover: 'https://cdn.myanimelist.net/images/anime/7/75919.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        genres: ['Экшен', 'Приключения', 'Драма', 'Фэнтези'],
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '134:00' }
+        ]
+    },
+    'howls-moving-castle': {
+        title: 'Ходячий замок Хаула',
+        episodes: 1,
+        year: '2004',
+        rating: 8.2,
+        description: 'Девушка превращается в старуху и отправляется в путешествие с волшебником.',
+        cover: 'https://cdn.myanimelist.net/images/anime/5/75810.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        genres: ['Приключения', 'Драма', 'Фэнтези', 'Романтика'],
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '119:00' }
         ]
     }
 };
@@ -251,44 +570,7 @@ function setBackgroundImages() {
     });
 }
 
-// Navigation Functions
-function initializeNavigation() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Smooth scroll to section
-            const targetId = this.getAttribute('href');
-            if (targetId && targetId !== '#search') {
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-    
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(12, 12, 12, 0.98)';
-        } else {
-            header.style.background = 'rgba(12, 12, 12, 0.95)';
-        }
-    });
-}
+// Navigation Functions (updated version is below)
 
 // Search Functions
 function initializeSearch() {
@@ -702,3 +984,333 @@ rainbowStyle.textContent = `
     }
 `;
 document.head.appendChild(rainbowStyle);
+
+// Catalog and Genre Functions
+let currentView = 'popular'; // 'popular', 'catalog', 'genre'
+let currentGenre = null;
+
+function showCatalog() {
+    currentView = 'catalog';
+    const section = document.querySelector('.section');
+    const container = section.querySelector('.container');
+    
+    // Update section title
+    const title = container.querySelector('.section-title');
+    title.textContent = 'Полный каталог аниме';
+    
+    // Create filter controls
+    const filterControls = createFilterControls();
+    
+    // Replace content
+    container.innerHTML = '';
+    container.appendChild(title);
+    container.appendChild(filterControls);
+    
+    // Show all anime
+    displayAnimeGrid(Object.keys(animeData), container);
+    
+    // Scroll to section
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
+function showGenres() {
+    currentView = 'genres';
+    const section = document.querySelector('.section');
+    const container = section.querySelector('.container');
+    
+    // Update section title
+    const title = container.querySelector('.section-title');
+    title.textContent = 'Выберите жанр';
+    
+    // Replace content
+    container.innerHTML = '';
+    container.appendChild(title);
+    
+    // Create genres grid
+    const genresGrid = createGenresGrid();
+    container.appendChild(genresGrid);
+    
+    // Scroll to section
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
+function showGenreAnime(genre) {
+    currentView = 'genre';
+    currentGenre = genre;
+    const section = document.querySelector('.section');
+    const container = section.querySelector('.container');
+    
+    // Update section title
+    const title = container.querySelector('.section-title');
+    title.textContent = `Аниме в жанре: ${genre}`;
+    
+    // Create back button
+    const backButton = document.createElement('button');
+    backButton.className = 'btn btn-secondary back-to-genres';
+    backButton.innerHTML = '<i class="fas fa-arrow-left"></i> Назад к жанрам';
+    backButton.onclick = showGenres;
+    
+    // Filter anime by genre
+    const genreAnime = Object.keys(animeData).filter(id => {
+        const anime = animeData[id];
+        return anime.genres && anime.genres.includes(genre);
+    });
+    
+    // Replace content
+    container.innerHTML = '';
+    container.appendChild(title);
+    container.appendChild(backButton);
+    
+    if (genreAnime.length > 0) {
+        displayAnimeGrid(genreAnime, container);
+    } else {
+        const noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.innerHTML = `
+            <i class="fas fa-sad-tear"></i>
+            <h3>Аниме в жанре "${genre}" не найдено</h3>
+            <p>Попробуйте выбрать другой жанр</p>
+        `;
+        container.appendChild(noResults);
+    }
+    
+    // Scroll to section
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
+function createFilterControls() {
+    const controls = document.createElement('div');
+    controls.className = 'filter-controls';
+    
+    // Sort options
+    const sortSelect = document.createElement('select');
+    sortSelect.className = 'sort-select';
+    sortSelect.innerHTML = `
+        <option value="rating">По рейтингу</option>
+        <option value="year">По году</option>
+        <option value="title">По названию</option>
+        <option value="episodes">По количеству эпизодов</option>
+    `;
+    
+    sortSelect.addEventListener('change', (e) => {
+        sortAndDisplayAnime(e.target.value);
+    });
+    
+    // Genre filter
+    const genreSelect = document.createElement('select');
+    genreSelect.className = 'genre-select';
+    genreSelect.innerHTML = '<option value="">Все жанры</option>';
+    
+    // Get all unique genres
+    const allGenres = new Set();
+    Object.values(animeData).forEach(anime => {
+        if (anime.genres) {
+            anime.genres.forEach(genre => allGenres.add(genre));
+        }
+    });
+    
+    Array.from(allGenres).sort().forEach(genre => {
+        const option = document.createElement('option');
+        option.value = genre;
+        option.textContent = genre;
+        genreSelect.appendChild(option);
+    });
+    
+    genreSelect.addEventListener('change', (e) => {
+        if (e.target.value) {
+            showGenreAnime(e.target.value);
+        } else {
+            showCatalog();
+        }
+    });
+    
+    controls.appendChild(document.createTextNode('Сортировать: '));
+    controls.appendChild(sortSelect);
+    controls.appendChild(document.createTextNode(' Жанр: '));
+    controls.appendChild(genreSelect);
+    
+    return controls;
+}
+
+function createGenresGrid() {
+    const genresGrid = document.createElement('div');
+    genresGrid.className = 'genres-grid-full';
+    
+    // Get all unique genres with counts
+    const genreCounts = {};
+    Object.values(animeData).forEach(anime => {
+        if (anime.genres) {
+            anime.genres.forEach(genre => {
+                genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+            });
+        }
+    });
+    
+    // Genre icons mapping
+    const genreIcons = {
+        'Экшен': 'fas fa-fist-raised',
+        'Приключения': 'fas fa-map',
+        'Комедия': 'fas fa-laugh',
+        'Драма': 'fas fa-theater-masks',
+        'Фэнтези': 'fas fa-magic',
+        'Романтика': 'fas fa-heart',
+        'Школа': 'fas fa-graduation-cap',
+        'Сверхъестественное': 'fas fa-ghost',
+        'Ужасы': 'fas fa-skull',
+        'Научная фантастика': 'fas fa-rocket',
+        'Спорт': 'fas fa-running',
+        'Военное': 'fas fa-shield-alt',
+        'Меха': 'fas fa-robot',
+        'Историческое': 'fas fa-landmark',
+        'Психологическое': 'fas fa-brain',
+        'Триллер': 'fas fa-eye',
+        'Семейное': 'fas fa-home',
+        'Космос': 'fas fa-satellite'
+    };
+    
+    Object.entries(genreCounts)
+        .sort(([,a], [,b]) => b - a) // Sort by count descending
+        .forEach(([genre, count]) => {
+            const genreCard = document.createElement('div');
+            genreCard.className = 'genre-card-full';
+            genreCard.onclick = () => showGenreAnime(genre);
+            
+            const icon = genreIcons[genre] || 'fas fa-tag';
+            
+            genreCard.innerHTML = `
+                <i class="${icon} genre-icon"></i>
+                <h3>${genre}</h3>
+                <p>${count} аниме</p>
+            `;
+            
+            genresGrid.appendChild(genreCard);
+        });
+    
+    return genresGrid;
+}
+
+function displayAnimeGrid(animeIds, container) {
+    const animeGrid = document.createElement('div');
+    animeGrid.className = 'anime-grid';
+    
+    animeIds.forEach(id => {
+        const anime = animeData[id];
+        if (!anime) return;
+        
+        const animeCard = document.createElement('div');
+        animeCard.className = 'anime-card';
+        animeCard.onclick = () => openPlayer(id);
+        
+        animeCard.innerHTML = `
+            <div class="anime-poster">
+                <img src="${anime.cover}" alt="${anime.title}">
+                <div class="anime-overlay">
+                    <i class="fas fa-play play-icon"></i>
+                </div>
+                <div class="anime-rating">${anime.rating}</div>
+            </div>
+            <div class="anime-info">
+                <h3 class="anime-title">${anime.title}</h3>
+                <p class="anime-year">${anime.year} • ${anime.episodes} эп.</p>
+                <div class="anime-genres">
+                    ${anime.genres ? anime.genres.slice(0, 2).map(genre => 
+                        `<span class="genre-tag">${genre}</span>`
+                    ).join('') : ''}
+                </div>
+            </div>
+        `;
+        
+        animeGrid.appendChild(animeCard);
+    });
+    
+    container.appendChild(animeGrid);
+}
+
+function sortAndDisplayAnime(sortBy) {
+    const container = document.querySelector('.section .container');
+    const animeGrid = container.querySelector('.anime-grid');
+    if (animeGrid) {
+        animeGrid.remove();
+    }
+    
+    let sortedIds = Object.keys(animeData);
+    
+    switch (sortBy) {
+        case 'rating':
+            sortedIds.sort((a, b) => animeData[b].rating - animeData[a].rating);
+            break;
+        case 'year':
+            sortedIds.sort((a, b) => {
+                const yearA = parseInt(animeData[a].year.split('-')[0]);
+                const yearB = parseInt(animeData[b].year.split('-')[0]);
+                return yearB - yearA;
+            });
+            break;
+        case 'title':
+            sortedIds.sort((a, b) => animeData[a].title.localeCompare(animeData[b].title));
+            break;
+        case 'episodes':
+            sortedIds.sort((a, b) => animeData[b].episodes - animeData[a].episodes);
+            break;
+    }
+    
+    displayAnimeGrid(sortedIds, container);
+}
+
+function showPopular() {
+    currentView = 'popular';
+    location.reload(); // Simple way to reset to original state
+}
+
+// Update navigation function to handle new sections
+function initializeNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Handle different sections
+            const targetId = this.getAttribute('href');
+            
+            switch (targetId) {
+                case '#home':
+                    showPopular();
+                    break;
+                case '#catalog':
+                    showCatalog();
+                    break;
+                case '#genres':
+                    showGenres();
+                    break;
+                case '#search':
+                    document.querySelector('.search-input').focus();
+                    break;
+                default:
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+            }
+        });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(12, 12, 12, 0.98)';
+        } else {
+            header.style.background = 'rgba(12, 12, 12, 0.95)';
+        }
+    });
+}
