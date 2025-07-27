@@ -90,8 +90,37 @@ TRIDNYAHEY/
 ## 🔧 Настройка
 
 1. Откройте `index.html` в браузере
-2. Для добавления нового аниме отредактируйте объект `animeData` в `script.js`
+2. Для добавления нового аниме см. подробную инструкцию в `HOW_TO_ADD_ANIME.md`
 3. Для изменения стилей используйте `styles.css`
+
+## 📚 Добавление нового аниме
+
+Подробная инструкция находится в файле `HOW_TO_ADD_ANIME.md`. Кратко:
+
+1. **Добавьте данные** в объект `animeData` в `script.js`:
+```javascript
+'anime-id': {
+    title: 'Название',
+    episodes: 24,
+    year: '2023',
+    rating: 8.5,
+    description: 'Описание...',
+    cover: 'https://cdn.myanimelist.net/images/anime/xxx/xxx.jpg',
+    videoUrl: 'https://video-url.mp4',
+    episodes_list: [
+        { number: 1, title: 'Эпизод 1', duration: '23:40' }
+    ]
+}
+```
+
+2. **Добавьте карточку** в `index.html` в секцию `anime-grid`
+
+3. **Обновите страницу** - готово!
+
+### 🖼️ Источники обложек:
+- **MyAnimeList**: `https://cdn.myanimelist.net/images/anime/...`
+- Высокое качество, стандартные размеры
+- Просто скопируйте ссылку на изображение
 
 ## 🎭 Easter Eggs
 

@@ -4,52 +4,171 @@ const slides = document.querySelectorAll('.hero-slide');
 const indicators = document.querySelectorAll('.indicator');
 let slideInterval;
 
-// Anime data for demo
+// Anime data with real covers and video sources
 const animeData = {
     'attack-on-titan': {
         title: 'Атака титанов',
         episodes: 75,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+        year: '2013-2023',
+        rating: 9.0,
+        description: 'Эпическая история о борьбе человечества за выживание в мире, где правят гигантские титаны.',
+        cover: 'https://cdn.myanimelist.net/images/anime/10/47347.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        episodes_list: [
+            { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10' },
+            { number: 2, title: 'В тот день', duration: '24:10' },
+            { number: 3, title: 'Тусклый свет среди отчаяния', duration: '24:10' }
+        ]
     },
     'naruto': {
         title: 'Наруто',
         episodes: 720,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+        year: '2002-2017',
+        rating: 8.4,
+        description: 'Приключения молодого ниндзя, мечтающего стать Хокаге своей деревни.',
+        cover: 'https://cdn.myanimelist.net/images/anime/13/17405.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        episodes_list: [
+            { number: 1, title: 'Узумаки Наруто появляется!', duration: '23:05' },
+            { number: 2, title: 'Меня зовут Коноха-мару!', duration: '23:05' },
+            { number: 3, title: 'Соперники? Сасуке и Сакура', duration: '23:05' }
+        ]
     },
     'demon-slayer': {
-        title: 'Демон Слайер',
+        title: 'Клинок, рассекающий демонов',
         episodes: 44,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
+        year: '2019-2023',
+        rating: 8.7,
+        description: 'История о мальчике, который стал охотником на демонов, чтобы спасти свою сестру.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1286/99889.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        episodes_list: [
+            { number: 1, title: 'Жестокость', duration: '23:40' },
+            { number: 2, title: 'Учитель Саконджи Урокодаки', duration: '23:40' },
+            { number: 3, title: 'Сабито и Макомо', duration: '23:40' }
+        ]
     },
     'jujutsu-kaisen': {
         title: 'Магическая битва',
         episodes: 24,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+        year: '2020-2021',
+        rating: 8.5,
+        description: 'Юноша попадает в мир магии и проклятий, чтобы спасти своих друзей.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        episodes_list: [
+            { number: 1, title: 'Рёмен Сукуна', duration: '23:42' },
+            { number: 2, title: 'Для меня самого', duration: '23:42' },
+            { number: 3, title: 'Девочка из стали', duration: '23:42' }
+        ]
     },
     'one-piece': {
         title: 'Ван Пис',
         episodes: 1000,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+        year: '1999-настоящее время',
+        rating: 9.0,
+        description: 'Приключения пирата Монки Д. Луффи в поисках легендарного сокровища.',
+        cover: 'https://cdn.myanimelist.net/images/anime/6/73245.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        episodes_list: [
+            { number: 1, title: 'Я - Луффи! Мужчина, который станет Королём Пиратов!', duration: '24:08' },
+            { number: 2, title: 'Появление великого мечника! Пиратский охотник Ророноа Зоро', duration: '24:08' },
+            { number: 3, title: 'Морган против Луффи! Кто такая загадочная красивая девушка?', duration: '24:08' }
+        ]
     },
     'spirited-away': {
         title: 'Унесённые призраками',
         episodes: 1,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
+        year: '2001',
+        rating: 9.3,
+        description: 'Девочка попадает в мир духов и должна найти способ вернуться домой.',
+        cover: 'https://cdn.myanimelist.net/images/anime/6/79597.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '125:00' }
+        ]
     },
     'your-name': {
         title: 'Твоё имя',
         episodes: 1,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+        year: '2016',
+        rating: 8.4,
+        description: 'Романтическая история о двух подростках, которые меняются телами.',
+        cover: 'https://cdn.myanimelist.net/images/anime/5/87048.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        episodes_list: [
+            { number: 1, title: 'Полнометражный фильм', duration: '106:00' }
+        ]
     },
     'death-note': {
         title: 'Тетрадь смерти',
         episodes: 37,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4'
+        year: '2006-2007',
+        rating: 9.0,
+        description: 'Студент находит тетрадь, способную убивать людей, и решает изменить мир.',
+        cover: 'https://cdn.myanimelist.net/images/anime/9/9453.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        episodes_list: [
+            { number: 1, title: 'Возрождение', duration: '23:10' },
+            { number: 2, title: 'Столкновение', duration: '23:10' },
+            { number: 3, title: 'Сделка', duration: '23:10' }
+        ]
     },
     'one-punch-man': {
         title: 'Ванпанчмен',
         episodes: 24,
-        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
+        year: '2015-2019',
+        rating: 8.7,
+        description: 'Герой, который может победить любого врага одним ударом.',
+        cover: 'https://cdn.myanimelist.net/images/anime/12/76049.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        episodes_list: [
+            { number: 1, title: 'Самый сильный мужчина', duration: '24:15' },
+            { number: 2, title: 'Одинокий киборг', duration: '24:15' },
+            { number: 3, title: 'Учёный, жаждущий справедливости', duration: '24:15' }
+        ]
+    },
+    'my-hero-academia': {
+        title: 'Моя геройская академия',
+        episodes: 138,
+        year: '2016-2023',
+        rating: 7.9,
+        description: 'В мире, где у большинства людей есть суперспособности, мальчик без них мечтает стать героем.',
+        cover: 'https://cdn.myanimelist.net/images/anime/10/78745.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        episodes_list: [
+            { number: 1, title: 'Изуку Мидория: Начало', duration: '23:40' },
+            { number: 2, title: 'Что нужно, чтобы стать героем', duration: '23:40' },
+            { number: 3, title: 'Ревущие мышцы', duration: '23:40' }
+        ]
+    },
+    'tokyo-ghoul': {
+        title: 'Токийский гуль',
+        episodes: 48,
+        year: '2014-2018',
+        rating: 7.8,
+        description: 'Студент становится полугулем и должен научиться жить в двух мирах.',
+        cover: 'https://cdn.myanimelist.net/images/anime/5/64449.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        episodes_list: [
+            { number: 1, title: 'Трагедия', duration: '23:50' },
+            { number: 2, title: 'Инкубационный период', duration: '23:50' },
+            { number: 3, title: 'Белый голубь', duration: '23:50' }
+        ]
+    },
+    'fullmetal-alchemist': {
+        title: 'Стальной алхимик: Братство',
+        episodes: 64,
+        year: '2009-2010',
+        rating: 9.1,
+        description: 'Братья-алхимики ищут философский камень, чтобы вернуть свои тела.',
+        cover: 'https://cdn.myanimelist.net/images/anime/1223/96541.jpg',
+        videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        episodes_list: [
+            { number: 1, title: 'Стальной алхимик', duration: '24:50' },
+            { number: 2, title: 'Первый день', duration: '24:50' },
+            { number: 3, title: 'Город еретиков', duration: '24:50' }
+        ]
     }
 };
 
@@ -258,7 +377,7 @@ function openPlayer(animeId) {
     video.src = anime.videoUrl;
     
     // Generate episodes
-    generateEpisodes(anime.episodes, episodesGrid);
+    generateEpisodes(animeId, episodesGrid);
     
     // Show modal
     modal.classList.add('active');
@@ -299,41 +418,56 @@ function handlePlayerKeydown(e) {
     }
 }
 
-function generateEpisodes(episodeCount, container) {
+function generateEpisodes(animeId, container) {
     container.innerHTML = '';
     
-    const maxEpisodes = Math.min(episodeCount, 50); // Limit for demo
+    const anime = animeData[animeId];
+    if (!anime || !anime.episodes_list) return;
     
-    for (let i = 1; i <= maxEpisodes; i++) {
-        const episodeBtn = document.createElement('button');
-        episodeBtn.className = 'episode-btn';
-        episodeBtn.textContent = i;
-        episodeBtn.onclick = () => selectEpisode(i, episodeBtn);
+    // Create episodes list with real titles
+    anime.episodes_list.forEach((episode, index) => {
+        const episodeItem = document.createElement('div');
+        episodeItem.className = 'episode-item';
+        episodeItem.innerHTML = `
+            <div class="episode-number">${episode.number}</div>
+            <div class="episode-details">
+                <div class="episode-title">${episode.title}</div>
+                <div class="episode-duration">${episode.duration}</div>
+            </div>
+            <button class="episode-play-btn" onclick="selectEpisode(${episode.number}, this.parentElement)">
+                <i class="fas fa-play"></i>
+            </button>
+        `;
         
-        if (i === 1) {
-            episodeBtn.classList.add('active');
+        if (index === 0) {
+            episodeItem.classList.add('active');
         }
         
-        container.appendChild(episodeBtn);
-    }
+        container.appendChild(episodeItem);
+    });
     
-    if (episodeCount > 50) {
-        const moreBtn = document.createElement('button');
-        moreBtn.className = 'episode-btn';
-        moreBtn.textContent = '...';
-        moreBtn.style.cursor = 'default';
-        container.appendChild(moreBtn);
+    // Add "show more" if there are more episodes
+    if (anime.episodes > anime.episodes_list.length) {
+        const moreItem = document.createElement('div');
+        moreItem.className = 'episode-item more-episodes';
+        moreItem.innerHTML = `
+            <div class="episode-details">
+                <div class="episode-title">Ещё ${anime.episodes - anime.episodes_list.length} эпизодов...</div>
+                <div class="episode-duration">Скоро будут добавлены</div>
+            </div>
+        `;
+        container.appendChild(moreItem);
     }
 }
 
-function selectEpisode(episodeNumber, buttonElement) {
-    // Remove active class from all episode buttons
-    document.querySelectorAll('.episode-btn').forEach(btn => {
-        btn.classList.remove('active');
+function selectEpisode(episodeNumber, episodeElement) {
+    // Remove active class from all episode items
+    document.querySelectorAll('.episode-item').forEach(item => {
+        item.classList.remove('active');
     });
     
-    // Add active class to selected button
-    buttonElement.classList.add('active');
+    // Add active class to selected episode
+    episodeElement.classList.add('active');
     
     // Change video source (for demo, we'll just restart the same video)
     const video = document.getElementById('tridnyah-player');

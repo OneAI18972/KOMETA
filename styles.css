@@ -613,25 +613,92 @@ body {
 }
 
 .episodes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
-.episode-btn {
+.episode-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.episode-item:hover {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.episode-item.active {
+    background: rgba(78, 205, 196, 0.2);
+    border-color: #4ecdc4;
+}
+
+.episode-number {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
     color: white;
-    padding: 0.5rem;
-    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.episode-details {
+    flex: 1;
+}
+
+.episode-title {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.episode-duration {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.episode-play-btn {
+    background: rgba(78, 205, 196, 0.2);
+    border: 1px solid #4ecdc4;
+    color: #4ecdc4;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.episode-btn:hover,
-.episode-btn.active {
+.episode-play-btn:hover {
     background: #4ecdc4;
-    border-color: #4ecdc4;
+    color: white;
+}
+
+.more-episodes {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.more-episodes:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Responsive Design */
