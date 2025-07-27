@@ -997,6 +997,37 @@ body {
     font-family: 'Courier New', monospace;
 }
 
+/* Quality indicator */
+.quality-indicator {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+}
+
+.quality-badge,
+.server-badge {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+.quality-badge {
+    background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+}
+
+.server-badge {
+    background: rgba(255, 107, 107, 0.8);
+    font-family: 'Courier New', monospace;
+}
+
 /* Enhanced responsive design */
 @media (max-width: 768px) {
     .filter-controls {

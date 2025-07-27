@@ -14,12 +14,12 @@ const animeData = {
         description: 'Эпическая история о борьбе человечества за выживание в мире, где правят гигантские титаны.',
         cover: 'https://cdn.myanimelist.net/images/anime/10/47347.jpg',
         videoUrl: 'https://tridnyahey.server/stream/attack-on-titan/s01e01.mp4',
-        realVideoUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4',
+        realVideoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         genres: ['Экшен', 'Драма', 'Фэнтези', 'Военное'],
         episodes_list: [
-            { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e01.mp4', realUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4' },
-            { number: 2, title: 'В тот день', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
-            { number: 3, title: 'Тусклый свет среди отчаяния', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }
+            { number: 1, title: 'Человечеству - 2000 лет спустя', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+            { number: 2, title: 'В тот день', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+            { number: 3, title: 'Тусклый свет среди отчаяния', duration: '24:10', url: 'https://tridnyahey.server/stream/attack-on-titan/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4' }
         ]
     },
     'naruto': {
@@ -35,7 +35,7 @@ const animeData = {
         episodes_list: [
             { number: 1, title: 'Узумаки Наруто появляется!', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e01.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
             { number: 2, title: 'Меня зовут Коноха-мару!', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e02.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
-            { number: 3, title: 'Соперники? Сасуке и Сакура', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e03.mp4', realUrl: 'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4' }
+            { number: 3, title: 'Соперники? Сасуке и Сакура', duration: '23:05', url: 'https://tridnyahey.server/stream/naruto/s01e03.mp4', realUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4' }
         ]
     },
     'demon-slayer': {
@@ -558,10 +558,27 @@ function showServerInfo() {
 // Generate fake server URLs for anime that don't have them
 function generateFakeServerUrls() {
     const videoSources = [
-        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        // Длинные полноценные видео (20-60 минут)
+        'https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4', // 9 минут HD
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', // 10 минут
+        'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4', // Тестовое видео
+        'https://file-examples.com/storage/fe86c86b9b66f0c2b4b5e0c/2017/10/file_example_MP4_1920_18MG.mp4', // 30 секунд HD
+        'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4', // Тестовое
+        'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4', // 2MB видео
+        
+        // Альтернативные источники для стабильности
         'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
         'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-        'https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4'
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4'
     ];
     
     Object.keys(animeData).forEach(animeId => {
@@ -758,12 +775,10 @@ function openPlayer(animeId) {
     
     // Set real video source after short delay to simulate server response
     setTimeout(() => {
-        const realUrl = anime.realVideoUrl || anime.videoUrl;
-        video.src = realUrl;
-        hideVideoLoading();
-        
-        // Show success notification with fake server info
-        showServerNotification(anime.title, 1);
+        loadVideoWithFallback(video, anime, () => {
+            hideVideoLoading();
+            showServerNotification(anime.title, 1);
+        });
     }, 1500);
     
     // Generate episodes
@@ -778,6 +793,9 @@ function openPlayer(animeId) {
     
     // Add escape key listener
     document.addEventListener('keydown', handlePlayerKeydown);
+    
+    // Preload next episode
+    preloadNextEpisode(anime, 1);
 }
 
 function closePlayer() {
@@ -881,14 +899,12 @@ function selectEpisode(episodeNumber, episodeElement) {
         
         // Simulate server loading
         setTimeout(() => {
-            const realUrl = currentEpisode.realUrl || currentEpisode.url;
-            video.src = realUrl;
-            video.currentTime = 0;
-            video.play();
-            hideVideoLoading();
-            
-            // Show server notification
-            showServerNotification(currentAnime.title, episodeNumber);
+            loadVideoWithFallback(video, currentEpisode, () => {
+                video.currentTime = 0;
+                video.play();
+                hideVideoLoading();
+                showServerNotification(currentAnime.title, episodeNumber);
+            });
         }, 800);
     } else {
         // Fallback
@@ -949,6 +965,108 @@ function toggleFullscreen() {
     } else if (video.msRequestFullscreen) {
         video.msRequestFullscreen();
     }
+}
+
+// Video Loading Functions
+function loadVideoWithFallback(video, animeOrEpisode, onSuccess) {
+    const videoSources = [
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', 
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    ];
+    
+    let currentSourceIndex = 0;
+    
+    function tryLoadVideo() {
+        const url = animeOrEpisode.realUrl || videoSources[currentSourceIndex];
+        console.log(`Trying to load video: ${url}`);
+        
+        video.src = url;
+        
+        const loadTimeout = setTimeout(() => {
+            console.log(`Video load timeout for: ${url}`);
+            tryNextSource();
+        }, 5000);
+        
+        video.addEventListener('loadeddata', function onLoad() {
+            clearTimeout(loadTimeout);
+            video.removeEventListener('loadeddata', onLoad);
+            console.log(`Video loaded successfully: ${url}`);
+            
+            // Add quality indicator
+            addQualityIndicator(video);
+            
+            onSuccess();
+        });
+        
+        video.addEventListener('error', function onError() {
+            clearTimeout(loadTimeout);
+            video.removeEventListener('error', onError);
+            console.log(`Video error for: ${url}`);
+            tryNextSource();
+        });
+    }
+    
+    function tryNextSource() {
+        currentSourceIndex++;
+        if (currentSourceIndex < videoSources.length) {
+            console.log(`Trying next video source (${currentSourceIndex + 1}/${videoSources.length})`);
+            tryLoadVideo();
+        } else {
+            console.error('All video sources failed');
+            hideVideoLoading();
+            showNotification('❌ Не удалось загрузить видео. Попробуйте позже.', 'error');
+        }
+    }
+    
+    tryLoadVideo();
+}
+
+function preloadNextEpisode(anime, currentEpisodeNumber) {
+    const nextEpisode = anime.episodes_list.find(ep => ep.number === currentEpisodeNumber + 1);
+    if (nextEpisode && nextEpisode.realUrl) {
+        const preloadVideo = document.createElement('video');
+        preloadVideo.preload = 'metadata';
+        preloadVideo.src = nextEpisode.realUrl;
+        console.log(`Preloading next episode: ${nextEpisode.title}`);
+    }
+}
+
+function addQualityIndicator(video) {
+    // Remove existing indicator
+    const existingIndicator = document.querySelector('.quality-indicator');
+    if (existingIndicator) {
+        existingIndicator.remove();
+    }
+    
+    const indicator = document.createElement('div');
+    indicator.className = 'quality-indicator';
+    
+    // Determine quality based on video dimensions
+    video.addEventListener('loadedmetadata', function() {
+        let quality = 'SD';
+        if (video.videoWidth >= 1920) quality = '1080p';
+        else if (video.videoWidth >= 1280) quality = '720p';
+        else if (video.videoWidth >= 854) quality = '480p';
+        
+        indicator.innerHTML = `
+            <span class="quality-badge">${quality}</span>
+            <span class="server-badge">CDN-${Math.floor(Math.random() * 4) + 1}</span>
+        `;
+        
+        const playerWrapper = video.parentElement;
+        playerWrapper.appendChild(indicator);
+        
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            indicator.style.opacity = '0';
+        }, 3000);
+    });
 }
 
 // Server Simulation Functions
