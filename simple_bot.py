@@ -1,7 +1,7 @@
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
-import random
+from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
+import asyncio
 
 # Настройка логирования
 logging.basicConfig(
@@ -12,7 +12,7 @@ logging.basicConfig(
 # Токен вашего бота
 TOKEN = "8210673104:AAH1ACvZkYEl3pw7IYm7vn2du-B4Bqb8NqM"
 
-def start(update: Update, context: CallbackContext) -> None:
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Обработчик команды /start"""
     keyboard = [
         [InlineKeyboardButton("💌 У вас новое письмо", callback_data='letter')],
@@ -22,19 +22,19 @@ def start(update: Update, context: CallbackContext) -> None:
     
     welcome_text = "🎀 Привет, дорогая! 🎀\n\nУ меня есть для тебя что-то особенное! 💕"
     
-    update.message.reply_text(welcome_text, reply_markup=reply_markup)
+    await update.message.reply_text(welcome_text, reply_markup=reply_markup)
 
-def button_handler(update: Update, context: CallbackContext) -> None:
+async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Обработчик нажатий на кнопки"""
     query = update.callback_query
-    query.answer()
+    await query.answer()
     
     if query.data == 'letter':
-        show_letter(query)
+        await show_letter(query)
     elif query.data == 'animation':
-        show_animation(query)
+        await show_animation(query)
 
-def show_letter(query) -> None:
+async def show_letter(query) -> None:
     """Показать письмо"""
     letter_text = """
 💌 *Дорогая nikswiq* 💌
@@ -50,39 +50,59 @@ def show_letter(query) -> None:
 *С любовью и заботой* 💖
 """
     
-    query.edit_message_text(
+    await query.edit_message_text(
         text=letter_text,
         parse_mode='Markdown'
     )
 
-def show_animation(query) -> None:
+async def show_animation(query) -> None:
     """Показать анимацию с информацией о создателе"""
-    hearts = ["💖", "💕", "💗", "💓", "💝", "💘", "💞", "💟"]
-    
-    # Создаем анимацию с сердечками
-    for i in range(5):
-        # Случайно выбираем сердечки для анимации
-        heart_line1 = " ".join(random.choices(hearts, k=8))
-        heart_line2 = " ".join(random.choices(hearts, k=8))
-        
-        animation_text = f"""
-{heart_line1}
-{heart_line2}
+    # Простая анимация с сердечками
+    animation_frames = [
+        """
+💖💕💗💓💝💘💞💟
 
 💖 *ТВОЙ МУЖ, РОМОЧКА* 💖
 
-{heart_line2}
-{heart_line1}
+💟💞💘💝💓💗💕💖
+""",
+        """
+💕💗💓💝💘💞💟💖
+
+💖 *ТВОЙ МУЖ, РОМОЧКА* 💖
+
+💖💟💞💘💝💓💗💕
+""",
+        """
+💗💓💝💘💞💟💖💕
+
+💖 *ТВОЙ МУЖ, РОМОЧКА* 💖
+
+💕💖💟💞💘💝💓💗
+""",
+        """
+💓💝💘💞💟💖💕💗
+
+💖 *ТВОЙ МУЖ, РОМОЧКА* 💖
+
+💗💕💖💟💞💘💝💓
+""",
+        """
+💝💘💞💟💖💕💗💓
+
+💖 *ТВОЙ МУЖ, РОМОЧКА* 💖
+
+💓💗💕💖💟💞💘💝
 """
-        
-        query.edit_message_text(
-            text=animation_text,
+    ]
+    
+    # Показываем каждый кадр анимации
+    for frame in animation_frames:
+        await query.edit_message_text(
+            text=frame,
             parse_mode='Markdown'
         )
-        
-        # Пауза между кадрами анимации
-        import time
-        time.sleep(0.8)
+        await asyncio.sleep(1.0)
     
     # Финальный кадр
     final_text = """
@@ -93,29 +113,23 @@ def show_animation(query) -> None:
 💟💞💘💝💓💗💕💖
 """
     
-    query.edit_message_text(
+    await query.edit_message_text(
         text=final_text,
         parse_mode='Markdown'
     )
 
-def main() -> None:
+async def main() -> None:
     """Запуск бота"""
-    # Создаем updater
-    updater = Updater(TOKEN)
-    
-    # Получаем dispatcher для регистрации обработчиков
-    dispatcher = updater.dispatcher
+    # Создаем приложение
+    application = Application.builder().token(TOKEN).build()
     
     # Добавляем обработчики
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CallbackQueryHandler(button_handler))
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CallbackQueryHandler(button_handler))
     
     # Запускаем бота
     print("🤖 Бот запущен! Нажмите Ctrl+C для остановки.")
-    updater.start_polling()
-    
-    # Держим бота запущенным
-    updater.idle()
+    await application.run_polling()
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
