@@ -1,0 +1,15 @@
+{
+  "name": "telegram-bot-nikswiq",
+  "version": "1.0.0",
+  "description": "Красивый Telegram бот для nikswiq",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "keywords": ["telegram", "bot", "nikswiq"],
+  "author": "Ромочка",
+  "license": "MIT"
+}
