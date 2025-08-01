@@ -1,0 +1,16 @@
+{
+  "name": "roblox-account-generator",
+  "version": "1.0.0",
+  "description": "Генератор Roblox аккаунтов",
+  "main": "generator.js",
+  "scripts": {
+    "start": "node generator.js",
+    "generate": "node generator.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1"
+  },
+  "keywords": ["roblox", "generator", "accounts"],
+  "author": "",
+  "license": "MIT"
+}
