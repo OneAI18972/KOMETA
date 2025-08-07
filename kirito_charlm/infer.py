@@ -19,6 +19,7 @@ def parse_args():
     p = argparse.ArgumentParser(description="Infer with char-level Kirito-inspired model")
     p.add_argument("--model_dir", type=str, default="outputs/charlm")
     p.add_argument("--prompt", type=str, required=True)
+    p.add_argument("--arc", type=str, default=None, help="Arc name, e.g. 'Aincrad', 'FairyDance', 'PhantomBullet', 'Alicization', 'UnitalRing'")
     p.add_argument("--max_new_chars", type=int, default=240)
     p.add_argument("--temperature", type=float, default=0.9)
     p.add_argument("--top_p", type=float, default=0.9)
@@ -47,6 +48,8 @@ def main():
     model.eval()
 
     preamble = KIRITO_STYLE
+    if args.arc:
+        preamble += f"<|system|> <|arc:{args.arc}|>\n"
     prompt = preamble + f"<|user|> {args.prompt}\n<|assistant|> "
 
     x = encode(prompt, stoi).unsqueeze(0).to(args.device)

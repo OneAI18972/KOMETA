@@ -19,8 +19,12 @@ def read_jsonl_messages(path: str | Path) -> List[List[Dict[str, str]]]:
                 continue
             obj = json.loads(line)
             msgs = obj.get("messages", [])
+            arc = obj.get("arc")
             # Keep only known roles
             cleaned = []
+            # Inject arc tag as system line if provided
+            if isinstance(arc, str) and arc.strip():
+                cleaned.append({"role": "system", "content": f"<|arc:{arc.strip()}|>"})
             for m in msgs:
                 role = m.get("role", "user")
                 if role not in ROLE_TAGS:
