@@ -1,0 +1,26 @@
+{
+  "name": "roblox-account-generator",
+  "version": "1.0.0",
+  "description": "Генератор Roblox аккаунтов с автоматической регистрацией",
+  "main": "auto-register.js",
+  "scripts": {
+    "start": "node generator.js",
+    "generate": "node generator.js",
+    "register": "node auto-register.js",
+    "register-headless": "node auto-register.js --headless"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "axios": "^1.6.0",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^21.11.0"
+  },
+  "keywords": [
+    "roblox",
+    "generator",
+    "accounts",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT"
+}
